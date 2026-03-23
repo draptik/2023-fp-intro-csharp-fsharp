@@ -1,30 +1,11 @@
-# slidev-theme-mathema-2021
-
-[![NPM version](https://img.shields.io/npm/v/slidev-theme-mathema-2021?color=3AB9D4&label=)](https://www.npmjs.com/package/slidev-theme-mathema-2021)
-
-A (...) theme for [Slidev](https://github.com/slidevjs/slidev).
-
-<!--
-  Learn more about how to write a theme:
-  https://sli.dev/themes/write-a-theme.html
---->
-
-<!--
-  run `npm run dev` to check out the slides for more details of how to start writing a theme
--->
-
-<!--
-  Put some screenshots here to demonstrate your theme
-
-  Live demo: [...]
--->
+# slidev-theme-red
 
 ## Install
 
 Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme automatically.
 
 <pre><code>---
-theme: <b>mathema-2021</b>
+theme: <b>red</b>
 ---</code></pre>
 
 Learn more about [how to use a theme](https://sli.dev/themes/use).

@@ -47,9 +47,8 @@ Slides:
 
 ### Martin Grotz
 
-- <mdi-email /> martin.grotz@mathema.de
+- <mdi-email /> martin.grotz@gmx.de
 - <logos-github-icon /> https://github.com/groma84
-- <mdi-web /> Blog: https://elm.finde-ich-super.de
 - <logos-linkedin-icon /> https://www.linkedin.com/in/martin-grotz/
   
 <img 

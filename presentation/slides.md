@@ -1,18 +1,18 @@
 ---
-theme: ./mathema-2023
+theme: ./red-theme
 
 defaults:
   layout: "default-with-footer"
 
 # infos for the footer (on slides with the default-with-footer layout)
-occasion: "Magdeburger DevDays 2024"
+occasion: "Magdeburger DevDays 2026"
 occasionLogoUrl: "images/magdeburger-dev-days-logo.jpeg"
-company: "MATHEMA GmbH"
+company: ""
 presenter: "Patrick Drechsler & Martin Grotz"
-contact: "patrick.drechsler@mathema.de & martin.grotz@mathema.de"
+contact: "patrick.drechsler@mathema.de & martin.grotz@danfoss.com"
 
 info: |
-  ## Von C# zu F# – Einführung in die funktionale Programmierung
+  ## Von C# zu F# – Einführung in die funktionale Programmierung - 2026 Edition
 
 canvasWidth: 980
 
