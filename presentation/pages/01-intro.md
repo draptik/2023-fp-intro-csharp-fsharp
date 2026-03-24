@@ -16,7 +16,7 @@ layout: two-cols
 ## Martin Grotz 🧑
 
 - Team Lead
-- Beruflich: C#, TypeScript/JavaScript
+- Beruflich: C#
 - Interessen:
     - Funktionale Programmierung
     - Web&Mobile Development

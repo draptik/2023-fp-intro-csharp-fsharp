@@ -36,12 +36,46 @@ override int GetHashCode() { /* ... */ }
 ### Exkurs 🧔🏻
 
 - manchmal genügt ein (leichtgewichtiges C#) record
-- aber: eigentlich will man soviel Logik wie möglich in ein Objekt packen (OO, Value Objekt, DDD)
+- aber: eigentlich will man soviel Logik wie möglich in ein Objekt packen (OO, Value Object, DDD)
 - (OO vs FP) und DDD
-    - OO: Objekt mit Verhalten -> Ursprung von Value Objekt (und DDD)
+    - OO: Objekt mit Verhalten -> Ursprung von Value Object (und DDD)
     - FP: Strikte Trennung von Daten und Verhalten
 
 Das Schöne an den unterschiedlichen Meinungen ist: 
 
 - man kann es situationsbedingt einfach lösen 
 - Und sich das Beste rauspicken
+
+---
+
+### Vogen
+
+- "A semi-opinionated library which is a source generator and a code analyser. It Source generates Value Objects"
+- der mitgelieferte Code Analyser verbietet eigene Konstruktoren, erkennt falsche Nutzung des Value Objects, ...
+- Standardimplementierungen für gängige Serialisierungen (JSON, EF Core, MongoDB, ...)
+- https://stevedunn.github.io/Vogen/vogen.html
+
+---
+
+### Vogen
+
+```csharp
+[ValueObject<int>]
+public partial struct CustomerId;
+
+CustomerId customerId = CustomerId.From(123);
+
+// Eigene Validierungslogik
+private static Validation Validate(int input) => input > 0
+    ? Validation.Ok
+    : Validation.Invalid("Customer IDs must be greater than 0.");
+
+// besondere Werte möglich, die dann als eine Art Enum generiert werden
+[ValueObject<float>]
+[Instance("Freezing", 0)]
+[Instance("Boiling", 100)]
+public readonly partial struct Celsius {
+    private static Validation Validate(float value) =>
+        value >= -273 ? Validation.Ok : Validation.Invalid("Cannot be colder than absolute zero");
+}    
+```
