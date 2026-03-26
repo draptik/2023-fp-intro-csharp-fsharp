@@ -43,8 +43,7 @@ type Option<'T> = Some<'T> | None
 ```csharp
 public Option<int> IntifyOption(string s)
 {
-    int result = -1;
-    bool success = int.TryParse(s, out result);
+    bool success = int.TryParse(s, out var result);
     return success ? Some(result) : None;
 }
 ```

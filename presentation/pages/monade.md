@@ -14,12 +14,12 @@ let stringToOption (s: string) : string option =
 let toUpper (s: string) : string = s.ToUpper()
 
 let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) : ??? =
-    let nonEmpty = stringToOption content
+    let (nonEmpty : string option) = stringToOption content
     // passt nicht: "string" erwartet, aber "string option" bekommen
-    let stored = storeInDatabase path nonEmpty
+    let (stored : string option option)= storeInDatabase path nonEmpty // 💥
     // passt nicht: "string option" erwartet, 
     // aber "string option option" bekommen
-    let nonEmptyUpper = Option.map toUpper stored
+    let nonEmptyUpper = Option.map toUpper stored // 💥
 ```
 
 ----
@@ -59,7 +59,7 @@ let stringToOption (s: string) : string option =
 let toUpper (s: string) : string = s.ToUpper()
 
 let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) : string option =
-    let nonEmpty = stringToOption content
-    let stored = Option.bind (storeInDatabase path) nonEmpty
-    let nonEmptyUpper = Option.map toUpper stored
+    let (nonEmpty : string option) = stringToOption content
+    let (stored : string option) = Option.bind (storeInDatabase path) nonEmpty
+    let (nonEmptyUpper : string option) = Option.map toUpper stored
 ```

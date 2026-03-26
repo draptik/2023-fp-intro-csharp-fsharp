@@ -1,4 +1,4 @@
-## Praktische Anwendung: Railway Oriented Programming 🧔🏻
+## Railway Oriented Programming 🧔🏻
 
 Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargestellt...
 
@@ -62,5 +62,4 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 
 - wenn die Eingabe fehlerhaft ist, muss die Funktion nichts tun, und kann den Fehler weiterreichen
 - wenn die Eingabe nicht fehlerhaft ist, wird der Wert an die Funktion gegeben
-- Das ist genau die **Monade** mit ihrem **bind**
 - Damit können wir elegant beliebig lange Ketten bauen

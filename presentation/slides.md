@@ -45,7 +45,7 @@ src: ./pages/option.md
 ---
 
 ---
-src: ./pages/layumba.md
+src: ./pages/railway.md
 ---
 
 ---
@@ -53,7 +53,7 @@ src: ./pages/fsharp.md
 ---
 
 ---
-src: ./pages/csharp9.md
+src: ./pages/libraries.md
 ---
 
 ---
@@ -62,10 +62,6 @@ src: ./pages/funktor.md
 
 ---
 src: ./pages/monade.md
----
-
----
-src: ./pages/railway.md
 ---
 
 ---

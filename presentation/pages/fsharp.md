@@ -125,6 +125,8 @@ let triple a = a * 3
 
 ## Discriminated Unions 🧑
 
+- vielleicht auch in C# 15
+
 ```fsharp
 // Discriminated Unions ("Tagged Union", "Sum Type", "Choice Type")
 type Vehicle = Bike | Car | Bus
@@ -134,7 +136,7 @@ let vehicle = Bike
 let laneText = 
   match vehicle with
   | Bike -> "Use the bike lane"
-  | Car -> "Use the car driving lane"
+  | Car -> "Use the car lane"
   | Bus -> "The bus uses its own lane"
 
 ```

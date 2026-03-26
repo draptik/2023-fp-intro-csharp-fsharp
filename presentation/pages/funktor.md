@@ -15,6 +15,8 @@
 
 ```csharp
 // C#
+
+// TODO: redo with CSharpFunctional Extensions und alle Code-Beispiele kurz austesten
 using LaYumba.Functional;
 using static LaYumba.Functional.F;
 
@@ -51,9 +53,9 @@ let stringToOption (s: string) : string option =
         Some s
 
 let nonEmptyStringToUpper (s: string) : ??? =
-    let nonEmpty = stringToOption s
+    let (nonEmpty : string option) = stringToOption s
     // passt nicht: "string" erwartet, aber "string option" bekommen
-    let nonEmptyUpper = toUpper nonEmpty
+    let nonEmptyUpper = toUpper nonEmpty // 💥
 ```
 
 ----
