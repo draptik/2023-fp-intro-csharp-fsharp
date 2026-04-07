@@ -1,4 +1,17 @@
-## FP 101 🧑 🧔🏻
+# Grundlagen der funktionalen Programmierung
+
+todo: Bild einfügen
+
+<!--
+<img
+  class="absolute bottom-10 left-20 w-180"
+  src="/images/tbd.png"
+/>
+-->
+
+---
+
+## FP 101
 
 - Functions as First Class Citizens
 - (Immutability)
@@ -9,7 +22,7 @@ That's it!
 
 ---
 
-### Immutability in C#  🧔🏻 #
+### Immutability in C#
 
 ```csharp
 public class Customer
@@ -34,7 +47,7 @@ public class Customer
 
 ---
 
-Syntax matters!  🧔🏻
+### Syntax matters!
 
 Classic C#
 

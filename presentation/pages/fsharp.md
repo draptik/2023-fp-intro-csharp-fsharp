@@ -1,11 +1,11 @@
-# Einführung in F# 🧑 #
+# Einführung in F#  #
 
 ![img](/images/fsharp256.png)
 
 
 ---
 
-## Warum? 🧑
+## Warum F#? 
 
 - weniger syntaktisches Rauschen
 - FP als default
@@ -13,7 +13,7 @@
 
 ----
 
-## F# 🧑 #
+## F#  #
 
 - Ursprünglich: Microsoft Forschungsprojekt
 - Heute: Community-driven
@@ -28,7 +28,7 @@
 
 ----
 
-## F# 🧑 #
+## F#  #
 
 - erzwingt keine puren Funktionen, sondern erlaubt Seiteneffekte
 - Statisch typisiert
@@ -42,7 +42,7 @@
 
 ----
 
-## Besonderheiten 🧑
+## Besonderheiten 
 
 - Significant whitespace
 - Reihenfolge der Definitionen in Datei wichtig
@@ -55,7 +55,7 @@
 
 ----
 
-## Immutability als Default 🧑
+## Immutability als Default 
 
 ```fsharp
 // Achtung: = ist hier keine Zuweisung, sondern heißt 
@@ -72,7 +72,7 @@ y <- 42
 
 ----
 
-## Typ-Inferenz 🧑
+## Typ-Inferenz 
 
 ```fsharp
 // Typen werden automatisch geschlussfolgert sofern möglich
@@ -84,7 +84,7 @@ let doubleExplicit (a: int) : int = a * 2
 
 ----
 
-## Currying 🧑
+## Currying 
 
 > Currying ist die Umwandlung einer Funktion mit mehreren Parametern in eine neue Funktion mit nur einem Parameter, die wiederum eine Funktion zurückgibt mit dem Rest der Parameter.
 
@@ -96,7 +96,7 @@ let addThree a b c = a + b + c
 
 ----
 
-## Partial Application 🧑
+## Partial Application 
 
 - Eine Funktion mit mehreren Parametern bekommt nur einen Teil ihrer Argumente übergeben - der Rest bleibt offen und kann später ausgefüllt werden
 - klappt nur so einfach wegen automatischem Currying in F#
@@ -111,7 +111,7 @@ let ten = add2 8 // (int)
 
 ----
 
-## Pipe-Operator 🧑
+## Pipe-Operator 
 
 ```fsharp
 // der letzte Parameter kann mit dem Ergebnis 
@@ -123,7 +123,7 @@ let triple a = a * 3
 
 ----
 
-## Discriminated Unions 🧑
+## Discriminated Unions 
 
 - vielleicht auch in C# 15
 
@@ -143,7 +143,7 @@ let laneText =
 
 ----
 
-## Discriminated Unions mit Werten 🧑
+## Discriminated Unions mit Werten 
 
 ```fsharp
 // auch mit unterschiedlichen(!) Daten an jedem Fall möglich
@@ -160,7 +160,7 @@ match c with
 
 ----
 
-## Record Types 🧑
+## Record Types 
 
 ```fsharp
 // Record Type
@@ -181,7 +181,7 @@ let shoppingCart = {
 
 ----
 
-## Record Types 🧑
+## Record Types 
 
 - Immutable by default
 - Unmöglich einen ungültigen Record zu erzeugen
@@ -191,7 +191,7 @@ let shoppingCart = {
 
 ----
 
-## Structural Equality 🧑
+## Structural Equality 
 
 ```fsharp
 // Structural Equality
@@ -205,7 +205,7 @@ let equal = (thing1 = thing2) // true
 
 ----
 
-## Structural Equality vs. DDD Aggregates 🧑
+## Structural Equality vs. DDD Aggregates 
 
 - Möchte man die Standard-Equality nicht, ist es best practice, Equality und Comparison zu verbieten
 - dann muss explizit auf eine Eigenschaft verglichen werden (z.B. die Id)

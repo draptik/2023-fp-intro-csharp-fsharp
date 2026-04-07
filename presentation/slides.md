@@ -65,10 +65,6 @@ src: ./pages/monade.md
 ---
 
 ---
-src: ./pages/introducing_fsharp.md
----
-
----
 src: ./pages/99-exit.md
 ---
 

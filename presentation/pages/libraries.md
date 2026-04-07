@@ -1,6 +1,9 @@
+# Funktionale Programmierung in C#
+
 ### Was ist heute schon möglich in C#
 
-- vieles geht mit Libraries auch schon in C#
+- die Entwicklung von C# geht in eine funktionale Richtung
+- vieles geht mit Libraries auch heute schon in C#
 - F# hat das alles eingebaut
 
 ---
@@ -20,14 +23,15 @@ https://nitter.space/dsymetweets/status/1294280620823240706#m
 
 ### C# 15
 
-- Discriminated Unions sind in der .NET 11 preview
+- Union Types sind in der preview
 - Syntax etc. kann sich noch ändern
 - noch nicht sicher, ob sie in C# 15 wirklich drin sein werden
+- https://devblogs.microsoft.com/dotnet/csharp-15-union-types/
 
 ```csharp
-public sealed record Cat(string Name);
-public sealed record Dog(string Name);
-public sealed record Bird(string Name);
+public record class Cat(string Name);
+public record class Dog(string Name);
+public record class Bird(string Name, bool Songbird);
 
 public union Pet(Cat, Dog, Bird);
 
@@ -43,7 +47,7 @@ public static string Describe(Pet pet) =>
 
 ---
 
-### C# Functional Extensions 🧔🏻
+### C# Functional Extensions
 
 - Nuget-Paket: [https://github.com/vkhorikov/CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions)
 - hat alles was man braucht, ohne zu kompliziert zu sein
@@ -51,13 +55,18 @@ public static string Describe(Pet pet) =>
 
 
 ---
-layout: two-cols
----
 
-### Discriminated Unions in C# jetzt schon nutzen 🧔🏻
+
+### Discriminated Unions in C# jetzt schon nutzen
 
 - OneOf [https://github.com/mcintyre321/OneOf](https://github.com/mcintyre321/OneOf)
 - dunet [https://github.com/domn1995/dunet](https://github.com/domn1995/dunet)
+
+---
+layout: two-cols
+---
+
+### OneOf
 
 ```csharp
 // OneOf
@@ -111,7 +120,7 @@ public void Shape_tests()
 layout: two-cols
 ---
 
-### Discriminated Unions in C#
+### dunet
 
 ```csharp
 // dunet
@@ -136,6 +145,7 @@ partial record Shape
 using static Shape;
 
 Shape shape = new Rectangle(3, 4);
+
 // inklusive Check, ob alle Cases behandelt werden
 var area = shape switch 
 {

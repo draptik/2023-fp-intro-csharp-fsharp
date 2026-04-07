@@ -1,23 +1,28 @@
-## Immutability in C#  🧔🏻
+## Immutability in C# 
 
 Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch **nach Erstellung nicht verändert wird**.
 
 - interne Werte dürfen ausschließlich vom Konstruktor verändert werden
-- kein public oder private setter
+- keine public oder private setters
 - kein parameterloser Konstrukor
 
 ---
 
-### C# 9 and greater... 🧔🏻
+### C# 9 and greater...
 
 C# records sind ein erster Schritt in die richtige Richtung:
 
-- immutable
 - Equality by structure
+- immutable
+- spezielle Syntax, um eine veränderte **Kopie** zu erzeugen: 
+
+```csharp 
+var x2 = x1 with {Value = 42};
+```
 
 ---
 
-### Equality by structure 🧔🏻
+### Equality by structure
 
 Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
 
@@ -33,9 +38,9 @@ override int GetHashCode() { /* ... */ }
 
 ---
 
-### Exkurs 🧔🏻
+### Exkurs
 
-- manchmal genügt ein (leichtgewichtiges C#) record
+- manchmal genügt ein (leichtgewichtiger) C# record
 - aber: eigentlich will man soviel Logik wie möglich in ein Objekt packen (OO, Value Object, DDD)
 - (OO vs FP) und DDD
     - OO: Objekt mit Verhalten -> Ursprung von Value Object (und DDD)

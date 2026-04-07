@@ -1,16 +1,16 @@
-## Railway Oriented Programming 🧔🏻
+## Railway Oriented Programming
 
 Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargestellt...
 
 ---
 
-### Problem: Keine standardisierte Strategie für Fehlerbehandlung 🧔🏻 
+### Problem: Keine standardisierte Strategie für Fehlerbehandlung 
 
 - Wenn wir davon ausgehen, dass Funktionen auch einen Fehlerfall haben, benötigen wir einen **neuen Datentyp**, der das abbilden kann
 
 ---
 
-### Result/Either 🧔🏻
+### Result/Either
 
 - kann entweder 
   - das Ergebnis beinhalten, oder 
@@ -24,8 +24,6 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 
 ---
 
- 🧔🏻
-
 - In Railway-Sprech bedeutet dass, dass man "zweigleisig" fährt:
 - Jede **Funktion** bekommt eine Eingabe, und 
   - hat "im Bauch" eine Weiche, die entscheidet ob 
@@ -34,8 +32,6 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 - Die Wrapperklasse mit der **Funktion** ist das Entscheidende!
 
 ---
-
- 🧔🏻
 
 - In anderen Worten: die Funktionen haben aktuell 1 Eingabe (1 Gleis), und 2 Ausgaben (2 Gleise)
 
@@ -47,8 +43,6 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 
 ---
 
- 🧔🏻
-
 - Man benötigt also einen Mechanismus, der eine 2-gleisige Ausgabe so umwandelt, dass eine Funktion, die eine 1-gleisige Eingabe erwartet, damit umgehen kann
 
 <img
@@ -58,7 +52,7 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 
 ---
 
-### Was muss dieser Mechanismus können? 🧔🏻
+### Was muss dieser Mechanismus können?
 
 - wenn die Eingabe fehlerhaft ist, muss die Funktion nichts tun, und kann den Fehler weiterreichen
 - wenn die Eingabe nicht fehlerhaft ist, wird der Wert an die Funktion gegeben

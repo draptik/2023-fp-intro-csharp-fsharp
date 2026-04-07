@@ -20,11 +20,13 @@
   - Book: [Grokking Simplicity](https://www.manning.com/books/grokking-simplicity)
 - C#
   - Book: [Functional Programming in C#](https://www.manning.com/books/functional-programming-in-c-sharp)
+  - Book: [Functional Programming with C#](https://www.oreilly.com/library/view/functional-programming-with/9781805122685/)
   - Blog: [Vladimir Khorikov](https://enterprisecraftsmanship.com/)
 - F#
-  - [F# Homepage](https://fsharp.org/)
-  - [F# for Fun and Profit](https://fsharpforfunandprofit.com/)
-  - [Railway Oriented Programming](https://fsharpforfunandprofit.com/rop/)
+  - Website: [F# Homepage](https://fsharp.org/)
+  - Blog: [F# for Fun and Profit](https://fsharpforfunandprofit.com/)
+  - Blog: [Railway Oriented Programming](https://fsharpforfunandprofit.com/rop/)
+  - Book: [F# in Action](https://www.manning.com/books/f-sharp-in-action)
 
 ---
 layout: two-cols
