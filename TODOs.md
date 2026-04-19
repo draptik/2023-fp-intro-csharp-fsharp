@@ -15,6 +15,10 @@
   - Fußzeile fehlt
   - Abstand zwischen linkem und rechtem Codeblocks fehlt
 
+## Railway Slides
+
+- [ ] PD: ich kann die Gleise nicht mehr sehen: Bilder überarbeiten
+
 ## Summary Slide
 
 - [ ] QR-Code aktualisieren
