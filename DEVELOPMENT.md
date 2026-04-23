@@ -81,7 +81,7 @@ Run from the `presentation/` folder (where `.markdownlint-cli2.yaml` is located)
 
 ```sh
 cd presentation
-markdownlint-cli2 "**/*.md"
+npm run lint
 ```
 
 ## Presentation (Slidev)
