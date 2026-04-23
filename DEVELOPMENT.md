@@ -63,6 +63,19 @@ This installs the versions defined in `mise.toml`:
 | Node               | lts      | Slidev presentation   |
 | markdownlint-cli2  | 0.22     | Markdown linting      |
 
+## Using system-installed tools with mise
+
+mise will use a tool already installed on your system if it satisfies the required version, rather than installing its own copy. This means you can install .NET or Node via your system package manager first and mise will pick them up automatically.
+
+For example, on Arch Linux:
+
+```sh
+sudo pacman -S dotnet-sdk nodejs
+mise install  # uses system versions if they match
+```
+
+Note: mise's dotnet plugin uses Microsoft's official install script, not pacman, when it needs to install .NET itself. Pre-installing via pacman avoids this.
+
 ## Using nvm instead of mise (Node only)
 
 A `.nvmrc` is provided in the `presentation/` folder for developers who prefer nvm:
