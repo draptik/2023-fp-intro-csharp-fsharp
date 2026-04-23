@@ -57,10 +57,11 @@ mise install
 
 This installs the versions defined in `mise.toml`:
 
-| Tool   | Version  | Used for              |
-|--------|----------|-----------------------|
-| .NET   | 10.0.104 | C# and F# code        |
-| Node   | 24.14.0  | Slidev presentation   |
+| Tool               | Version  | Used for              |
+|--------------------|----------|-----------------------|
+| .NET               | 10.0.104 | C# and F# code        |
+| Node               | 24.14.0  | Slidev presentation   |
+| markdownlint-cli2  | 0.22     | Markdown linting      |
 
 ## Using nvm instead of mise (Node only)
 
@@ -73,6 +74,15 @@ nvm use
 ```
 
 Note: you will still need to install .NET manually if you don't use mise.
+
+## Markdown linting
+
+Run from the `presentation/` folder (where `.markdownlint-cli2.yaml` is located):
+
+```sh
+cd presentation
+markdownlint-cli2 "**/*.md"
+```
 
 ## Presentation (Slidev)
 
