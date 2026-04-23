@@ -8,14 +8,15 @@
 
 ## Layout
 
-- [ ] allg.: wirkt etwas "holprig" -> wir müssen die Header-Level vereinheitlichen, es wird wild zwischen h2 h3 h4 gesprungen, ODER allen headern ab h2 die gleiche line-height verpassen
-- [x] Intro-Slide: Fonts und Farben passen nicht zueinander
-- [x] allg.: fast alle Slides sind "nach unten verschoben": Oben wird Platz verschenkt, unten wirkt alles etwas gestaucht.
 - [ ] Code Formatierung: Kommentare sollten wir besser sichtbar machen
+  - erster Versuch
 - [ ] ein paar Bilder einfügen auf den "Kapitel-Start"-Slides
 - [ ] `two-column` Layout
   - Fußzeile fehlt
   - Abstand zwischen linkem und rechtem Codeblocks fehlt
+- [x] allg.: wirkt etwas "holprig" -> wir müssen die Header-Level vereinheitlichen, es wird wild zwischen h2 h3 h4 gesprungen, ODER allen headern ab h2 die gleiche line-height verpassen
+- [x] Intro-Slide: Fonts und Farben passen nicht zueinander
+- [x] allg.: fast alle Slides sind "nach unten verschoben": Oben wird Platz verschenkt, unten wirkt alles etwas gestaucht.
 
 ## Railway Slides
 
@@ -27,7 +28,8 @@
 
 ## AI Slide
 
-Idee: 
+Idee:
+
 - Auch wenn viele Leute in Zukunft nur noch mit Prompts Code generieren lassen, bietet F# durch sein starkes Typsystem
 eine bessere implizite Verifikation durch den Compiler als C#...
 - man kann auch ganz gut die Domäne selbst spezifizieren und dann viel generieren lassen -> auch LLMs profitieren von der "Pit of success"
