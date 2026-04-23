@@ -133,10 +133,10 @@ type Vehicle = Bike | Car | Bus
 // Pattern Matching zur Behandlung der verschiedenen Fälle
 let vehicle = Bike
 let laneText = 
-  match vehicle with
-  | Bike -> "Use the bike lane"
-  | Car -> "Use the car lane"
-  | Bus -> "The bus uses its own lane"
+    match vehicle with
+    | Bike -> "Use the bike lane"
+    | Car -> "Use the car lane"
+    | Bus -> "The bus uses its own lane"
 
 ```
 

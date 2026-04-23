@@ -2,11 +2,11 @@
 
 ```fsharp
 let storeInDatabase (path: string) (content: string) : string option = 
-  try
-    System.IO.File.WriteAllText(path, content)
-    Some content
-  with
-    ex -> None
+    try
+        System.IO.File.WriteAllText(path, content)
+        Some content
+    with
+        ex -> None
 
 let stringToOption (s: string) : string option =
     if String.IsNullOrWhiteSpace s then None else Some s
@@ -37,7 +37,7 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
 - Bezeichnung in der FP-Welt: **Monade**
 
 ```fsharp
-  bind: (a -> M b) -> M a -> M b
+    bind: (a -> M b) -> M a -> M b
 ```
 
 - Andere Bezeichnungen für "bind": flatMap, SelectMany (LINQ), &gt;&gt;=
@@ -48,11 +48,11 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
 
 ```fsharp
 let storeInDatabase (path: string) (content: string) : string option = 
-  try
-    System.IO.File.WriteAllText(path, content)
-    Some content
-  with
-    ex -> None
+    try
+        System.IO.File.WriteAllText(path, content)
+        Some content
+    with
+        ex -> None
 
 let stringToOption (s: string) : string option =
     if String.IsNullOrWhiteSpace s then None else Some s

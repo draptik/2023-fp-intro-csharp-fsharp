@@ -4,21 +4,21 @@
 let add (a: int) (b: int) : int = a + b
 
 let onlyPositive (i: int) : int option =
-  if i > 0 then
-    Some i
-  else
-    None
+    if i > 0 then
+        Some i
+    else
+        None
 
 let addTwoNumbers (a: int) (b: int) : int option =
-  let positiveA = onlyPositive a
-  let positiveB = onlyPositive b
-  // passt nicht, 2x int erwartet, aber 2x int option übergeben
-  let sum = add positiveA positiveB
+    let positiveA = onlyPositive a
+    let positiveB = onlyPositive b
+    // passt nicht, 2x int erwartet, aber 2x int option übergeben
+    let sum = add positiveA positiveB
 
-  // für zwei (und drei) in F# bereits vordefiniert:
-  let sum = Option.map2 add positiveA positiveB
+    // für zwei (und drei) in F# bereits vordefiniert:
+    let sum = Option.map2 add positiveA positiveB
 
-  // aber was, wenn man mehr Parameter hat?
+    // aber was, wenn man mehr Parameter hat?
 ```
 
 ---
@@ -38,7 +38,7 @@ let addTwoNumbers (a: int) (b: int) : int option =
 - Bezeichnung in der FP-Welt: **Applicative Functor**
 
 ```fsharp
-  apply: AF (a -> b) -> AF a -> AF b
+    apply: AF (a -> b) -> AF a -> AF b
 ```
 
 - Andere Bezeichnungen für "apply": ap, &lt;*&gt;

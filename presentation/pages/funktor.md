@@ -78,7 +78,7 @@ let nonEmptyStringToUpper (s: string) : ??? =
 - Bezeichnung in der FP-Welt: **Funktor**
 
 ```fsharp
-  map: (a -> b) -> F a -> F b
+    map: (a -> b) -> F a -> F b
 ```
 
 - Andere Bezeichnungen für "map": fmap (z.B. in Haskell), Select (LINQ), &lt;$&gt;, &lt;!&gt;
