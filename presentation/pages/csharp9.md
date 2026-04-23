@@ -7,5 +7,4 @@
 
 ![/images/tweet-don-syme-fsharp-csharp.png](/images/tweet-don-syme-fsharp-csharp.png)
 
-https://twitter.com/dsymetweets/status/1294280620823240706
-
+<https://twitter.com/dsymetweets/status/1294280620823240706>

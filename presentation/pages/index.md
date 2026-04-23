@@ -1,5 +1,3 @@
-
-
 FILE: 02-fp-basics_first_class_functions.md
 
 ---

@@ -2,9 +2,7 @@
 
 - Fachdomäne: **Grußkartenversand**
 
-
 <img style="object-fit:contain; width: 50%; margin-top: 2rem;" src="/images/briefe--mediamodifier-IQpZZ5wnrgA-unsplash.jpg">
-
 
 ----
 

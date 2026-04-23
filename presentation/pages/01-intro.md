@@ -7,9 +7,9 @@ layout: two-cols
 - Software Entwickler
 - Beruflich: C#
 - Interessen:
-    - Funktionale Programmierung
-    - Software Crafting
-    - Domain-Driven Design
+  - Funktionale Programmierung
+  - Software Crafting
+  - Domain-Driven Design
 
 ::right::
 
@@ -18,9 +18,9 @@ layout: two-cols
 - Team Lead
 - Beruflich: C#
 - Interessen:
-    - Funktionale Programmierung
-    - Web&Mobile Development
-    - Soft Skills
+  - Funktionale Programmierung
+  - Web&Mobile Development
+  - Soft Skills
 
 ---
 

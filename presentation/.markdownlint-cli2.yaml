@@ -1,5 +1,6 @@
 ignores:
   - "node_modules/**"
+  - "red-theme/**"
 
 config:
   MD001: false # heading increment should only increase by one level
