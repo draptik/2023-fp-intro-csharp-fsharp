@@ -6,7 +6,7 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "lint": "markdownlint-cli2 \"**/*.md\""
+    "lint": "node scripts/lint-slides.mjs"
   },
   "dependencies": {
     "@slidev/cli": "52.14.1",
