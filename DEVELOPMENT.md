@@ -60,7 +60,7 @@ This installs the versions defined in `mise.toml`:
 | Tool               | Version  | Used for              |
 |--------------------|----------|-----------------------|
 | .NET               | 10.0.104 | C# and F# code        |
-| Node               | 24.14.0  | Slidev presentation   |
+| Node               | lts      | Slidev presentation   |
 | markdownlint-cli2  | 0.22     | Markdown linting      |
 
 ## Using nvm instead of mise (Node only)

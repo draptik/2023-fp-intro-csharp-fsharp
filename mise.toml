@@ -1,6 +1,6 @@
 [tools]
 dotnet = "10.0.104"
-node = "24.14.0"
+node = "lts"
 "npm:markdownlint-cli2" = "0.22"
 
 [env]
