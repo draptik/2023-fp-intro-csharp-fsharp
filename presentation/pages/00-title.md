@@ -1,5 +1,5 @@
 # Von C# zu F#
 
-#### Einführung in die funktionale Programmierung - 2026
+#### Einführung in die funktionale Programmierung
 
 ##### Patrick Drechsler & Martin Grotz

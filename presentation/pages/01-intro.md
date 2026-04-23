@@ -23,8 +23,6 @@ layout: two-cols
     - Soft Skills
 
 ---
-layout: two-cols-header
----
 
 ## Agenda
 

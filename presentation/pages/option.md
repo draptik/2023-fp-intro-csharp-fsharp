@@ -1,16 +1,3 @@
-# Konzepte und Entwurfsmuster
-
-todo: Bild einfügen
-
-<!--
-<img
-  class="absolute bottom-10 left-20 w-180"
-  src="/images/tbd.png"
-/>
--->
-
----
-
 ## Mögliches Vorhandensein eines Werts
 
 #### oder: null ist gefährlich.
