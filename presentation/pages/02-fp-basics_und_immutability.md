@@ -64,5 +64,3 @@ Expression body: Seiteneffekte sind schwieriger reinzubauen
 ```csharp
 int Add(int a, int b) => a + b;
 ```
-
-

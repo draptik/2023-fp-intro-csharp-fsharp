@@ -9,7 +9,7 @@
 
 ## Imperativ...
 
-**Wie** mache ich etwas 
+**Wie** mache ich etwas
 
 ```csharp
 var people = new List<Person>();
@@ -31,7 +31,7 @@ var avg = incomes.Sum() / incomes.Count;
 
 versus...
 
-----
+---
 
 ## Deklarativ
 

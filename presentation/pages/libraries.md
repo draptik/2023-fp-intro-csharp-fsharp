@@ -17,7 +17,7 @@
 
 ![/images/tweet-don-syme-fsharp-csharp.png](/images/tweet-don-syme-fsharp-csharp.png)
 
-https://nitter.space/dsymetweets/status/1294280620823240706#m
+<https://nitter.space/dsymetweets/status/1294280620823240706#m>
 
 ---
 
@@ -26,7 +26,7 @@ https://nitter.space/dsymetweets/status/1294280620823240706#m
 - Union Types sind in der preview
 - Syntax etc. kann sich noch ändern
 - noch nicht sicher, ob sie in C# 15 wirklich drin sein werden
-- https://devblogs.microsoft.com/dotnet/csharp-15-union-types/
+- <https://devblogs.microsoft.com/dotnet/csharp-15-union-types/>
 
 ```csharp
 public record class Cat(string Name);
@@ -53,9 +53,7 @@ public static string Describe(Pet pet) =>
 - hat alles was man braucht, ohne zu kompliziert zu sein
 - haben wir erfolgreich in Projekten eingesetzt
 
-
 ---
-
 
 ### Discriminated Unions in C# jetzt schon nutzen
 
@@ -133,8 +131,6 @@ partial record Shape
     partial record Rectangle(double Length, double Width);
 }
 ```
-
-
 
 ::right::
 

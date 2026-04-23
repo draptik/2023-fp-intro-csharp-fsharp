@@ -1,4 +1,4 @@
-## Immutability in C# 
+## Immutability in C#
 
 Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch **nach Erstellung nicht verändert wird**.
 
@@ -14,9 +14,9 @@ C# records sind ein erster Schritt in die richtige Richtung:
 
 - Equality by structure
 - immutable
-- spezielle Syntax, um eine veränderte **Kopie** zu erzeugen: 
+- spezielle Syntax, um eine veränderte **Kopie** zu erzeugen:
 
-```csharp 
+```csharp
 var x2 = x1 with {Value = 42};
 ```
 
@@ -43,12 +43,12 @@ override int GetHashCode() { /* ... */ }
 - manchmal genügt ein (leichtgewichtiger) C# record
 - aber: eigentlich will man soviel Logik wie möglich in ein Objekt packen (OO, Value Object, DDD)
 - (OO vs FP) und DDD
-    - OO: Objekt mit Verhalten -> Ursprung von Value Object (und DDD)
-    - FP: Strikte Trennung von Daten und Verhalten
+  - OO: Objekt mit Verhalten -> Ursprung von Value Object (und DDD)
+  - FP: Strikte Trennung von Daten und Verhalten
 
-Das Schöne an den unterschiedlichen Meinungen ist: 
+Das Schöne an den unterschiedlichen Meinungen ist:
 
-- man kann es situationsbedingt einfach lösen 
+- man kann es situationsbedingt einfach lösen
 - Und sich das Beste rauspicken
 
 ---
@@ -58,7 +58,7 @@ Das Schöne an den unterschiedlichen Meinungen ist:
 - "A semi-opinionated library which is a source generator and a code analyser. It Source generates Value Objects"
 - der mitgelieferte Code Analyser verbietet eigene Konstruktoren, erkennt falsche Nutzung des Value Objects, ...
 - Standardimplementierungen für gängige Serialisierungen (JSON, EF Core, MongoDB, ...)
-- https://stevedunn.github.io/Vogen/vogen.html
+- <https://stevedunn.github.io/Vogen/vogen.html>
 
 ---
 
@@ -82,5 +82,5 @@ private static Validation Validate(int input) => input > 0
 public readonly partial struct Celsius {
     private static Validation Validate(float value) =>
         value >= -273 ? Validation.Ok : Validation.Invalid("Cannot be colder than absolute zero");
-}    
+}
 ```

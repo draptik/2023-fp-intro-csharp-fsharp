@@ -23,13 +23,13 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
     nonEmptyUpper
 ```
 
-----
+---
 
 ### Monade ("Chainable")
 
 ![img](/images/Monade_1.png)
 
-----
+---
 
 ### Monade ("Chainable")
 

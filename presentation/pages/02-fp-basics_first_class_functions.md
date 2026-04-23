@@ -39,5 +39,4 @@ class SomeService
 Func<double, string> GetConverterFn(bool withDecimals) 
   => withDecimals ? ToStringWithDecimals : ToStringNoDecimals;
 }
-
 ```

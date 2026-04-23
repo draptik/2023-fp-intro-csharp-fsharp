@@ -4,7 +4,7 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 
 ---
 
-### Problem: Keine standardisierte Strategie für Fehlerbehandlung 
+### Problem: Keine standardisierte Strategie für Fehlerbehandlung
 
 - Wenn wir davon ausgehen, dass Funktionen auch einen Fehlerfall haben, benötigen wir einen **neuen Datentyp**, der das abbilden kann
 
@@ -12,8 +12,8 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 
 ### Result/Either
 
-- kann entweder 
-  - das Ergebnis beinhalten, oder 
+- kann entweder
+  - das Ergebnis beinhalten, oder
   - einen Fehlerfall
 - `Either` besteht aus zwei Teilen
   - `Left`
@@ -25,9 +25,9 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 ---
 
 - In Railway-Sprech bedeutet dass, dass man "zweigleisig" fährt:
-- Jede **Funktion** bekommt eine Eingabe, und 
-  - hat "im Bauch" eine Weiche, die entscheidet ob 
-    - auf das Fehlergleis oder 
+- Jede **Funktion** bekommt eine Eingabe, und
+  - hat "im Bauch" eine Weiche, die entscheidet ob
+    - auf das Fehlergleis oder
     - auf das Erfolgsgleis umgeschaltet wird.
 - Die Wrapperklasse mit der **Funktion** ist das Entscheidende!
 
@@ -39,7 +39,6 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
   class="absolute bottom-50 left-10 w-200"
   src="/images/rop-tracks-Page-2.png"
 />
-
 
 ---
 

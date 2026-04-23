@@ -2,7 +2,7 @@
 
 #### oder: null ist gefährlich.
 
-----
+---
 
 ### Enthält die Signatur die ganze Wahrheit?
 
@@ -24,7 +24,7 @@ public int Intify(string s)
 }
 ```
 
-----
+---
 
 ## Option
 
@@ -36,7 +36,7 @@ type Option<'T> = Some<'T> | None
 - oder es ist kein Wert da, dann gibt es ein leeres "None"
 - alternative Bezeichnungen: Optional, Maybe
 
-----
+---
 
 ## Mit Option
 
@@ -48,7 +48,7 @@ public Option<int> IntifyOption(string s)
 }
 ```
 
-----
+---
 
 ### Wie komme ich an einen eingepackten Wert ran?
 
@@ -64,11 +64,11 @@ public string Stringify<T>(Option<T> data)
 }
 ```
 
-----
+---
 
 ### Vorteile
 
 - Explizite Semantik: Wert ist da - oder eben nicht
 - Die Signatur von Match erzwingt eine Behandlung beider Fälle - nie wieder vergessene Null-Checks!
 - Achtung: In C# bleibt das Problem, dass "Option" auch ein Objekt ist - und daher selbst null sein kann
-- daher mindestens: in C# explizites NULL enablen mit `<Nullable>enable</Nullable>` 
+- daher mindestens: in C# explizites NULL enablen mit `<Nullable>enable</Nullable>`

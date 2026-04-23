@@ -8,14 +8,14 @@ todo: bild einfügen
 
 ![Scott Wlaschin shows FP patterns in one of his talks](/images/patterns-and-principles-in-fp.png)
 
-----
+---
 
 ## Kleine Funktionen zu größeren verbinden
 
 - Gängige Vorgehensweise: Kleine Funktionen werden zu immer größeren Funktionalitäten zusammengesteckt ("Komposition")
 - Problem: Nicht alle Funktionen passen gut zusammen
 
-----
+---
 
 ### Problem: Wert in Container, Funktion kann nichts damit anfangen
 
@@ -41,7 +41,7 @@ public class X
 }
 ```
 
-----
+---
 
 ### Problem: Wert in Container, Funktion kann nichts damit anfangen
 
@@ -64,13 +64,13 @@ let nonEmptyStringToUpper (s: string) : ??? =
     let nonEmptyUpper = toUpper nonEmpty // 💥
 ```
 
-----
+---
 
 ### Funktor ("Mappable")
 
 ![img](/images/Funktor_1.png)
 
-----
+---
 
 ### Funktor ("Mappable")
 
@@ -83,7 +83,7 @@ let nonEmptyStringToUpper (s: string) : ??? =
 
 - Andere Bezeichnungen für "map": fmap (z.B. in Haskell), Select (LINQ), &lt;$&gt;, &lt;!&gt;
 
-----
+---
 
 ### Funktor = Lösung für "Wert in Container, Funktion kann nichts damit anfangen"
 
@@ -105,7 +105,7 @@ let nonEmptyStringToUpper (s: string) : string option =
     let nonEmptyUpper = Option.map toUpper nonEmpty
 ```
 
-----
+---
 
 ### Beispiel nochmal in C#
 
@@ -129,5 +129,4 @@ public class X
                 .Map(ToUpper);
         }
 }
-
 ```

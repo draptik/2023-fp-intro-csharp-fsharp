@@ -8,7 +8,6 @@
 
 ---
 
-
 ## Ressourcen
 
 - FP
@@ -31,25 +30,24 @@ layout: two-cols
 
 ### Patrick Drechsler
 
-- <mdi-email /> patrick.drechsler@mathema.de
-- <logos-github-icon /> https://github.com/draptik
-- <mdi-web /> Blog: https://draptik.github.io
-- <logos-mastodon-icon /> @drechsler@floss.social
-- <logos-linkedin-icon /> https://www.linkedin.com/in/patrick-drechsler-draptik/
+- <mdi-email /> <patrick.drechsler@mathema.de>
+- <logos-github-icon /> <https://github.com/draptik>
+- <mdi-web /> Blog: <https://draptik.github.io>
+- <logos-linkedin-icon /> <https://www.linkedin.com/in/patrick-drechsler-draptik/>
 
-Slides: 
+Slides:
 
 - QR-Code 👉
-- https://draptik.github.io/2024-05-md-dev-days-fp-intro-csharp-fsharp/
+- <https://draptik.github.io/2024-05-md-dev-days-fp-intro-csharp-fsharp/>
 
 ::right::
 
 ### Martin Grotz
 
-- <mdi-email /> martin.grotz@gmx.de
-- <logos-github-icon /> https://github.com/groma84
-- <logos-linkedin-icon /> https://www.linkedin.com/in/martin-grotz/
+- <mdi-email /> <martin.grotz@gmx.de>
+- <logos-github-icon /> <https://github.com/groma84>
+- <logos-linkedin-icon /> <https://www.linkedin.com/in/martin-grotz/>
   
-<img 
+<img
   class="absolute bottom-0 right-50 w-60"
   src="/images/qr-code-magdeburger-devdays-2024-draptik.png" >
