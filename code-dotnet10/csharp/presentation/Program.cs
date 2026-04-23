@@ -4,17 +4,12 @@ Console.WriteLine(AddNumbers(1, 2, 3));
 Console.WriteLine(AddNumbers(-1, -2, -3));
 return;
 
-int Sum(int a, int b, int c)
-{
-    return a + b + c;
-}
+int Sum(int a, int b, int c) => a + b + c;
 
 Result<int> OnlyPositive(int i)
-{
-    return i > 0
+    => i > 0
         ? Result.Success(i)
         : Result.Failure<int>($"Number {i} is not positive.");
-}
 
 Result<int> AddNumbers(int a, int b, int c)
 {

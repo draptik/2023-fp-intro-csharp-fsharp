@@ -1,12 +1,7 @@
-// ReSharper disable MemberCanBeMadeStatic.Local
-// ReSharper disable ArrangeTypeMemberModifiers
-
-using System.Diagnostics.CodeAnalysis;
 using CSharpFunctionalExtensions;
 
 namespace presentation;
 
-[SuppressMessage("Performance", "CA1822:Mark members as static")]
 public class Applicative
 {
     void Example()
@@ -15,17 +10,12 @@ public class Applicative
         Console.WriteLine(AddNumbers(-1, -2, -3));
     }
 
-    int Sum(int a, int b, int c)
-    {
-        return a + b + c;
-    }
+    int Sum(int a, int b, int c) => a + b + c;
 
     Result<int> OnlyPositive(int i)
-    {
-        return i > 0
+        => i > 0
             ? Result.Success(i)
             : Result.Failure<int>($"Number {i} is not positive.");
-    }
 
     Result<int> AddNumbers(int a, int b, int c)
     {

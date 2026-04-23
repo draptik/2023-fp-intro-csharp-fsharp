@@ -1,22 +1,13 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using CSharpFunctionalExtensions;
+﻿using CSharpFunctionalExtensions;
 
 namespace presentation;
 
-[SuppressMessage("ReSharper", "MemberCanBeMadeStatic.Local")]
-[SuppressMessage("ReSharper", "ArrangeTypeMemberModifiers")]
-[SuppressMessage("Performance", "CA1822:Mark members as static")]
 public class FunctorExample
 {
-    string ToUpper(string s)
-    {
-        return s.ToUpper();
-    }
+    string ToUpper(string s) => s.ToUpper();
 
     Maybe<string> StringToMaybe(string s)
-    {
-        return string.IsNullOrEmpty(s) ? Maybe.None : Maybe.From(s);
-    }
+        => string.IsNullOrEmpty(s) ? Maybe.None : Maybe.From(s);
 
     Maybe<string> NonEmptyStringToUpper(string s)
     {
