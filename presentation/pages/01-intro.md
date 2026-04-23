@@ -29,7 +29,6 @@ layout: two-cols-header
 ## Agenda
 
 - Grundlagen der funktionalen Programmierung
-- Konzepte und Entwurfsmuster
-- Grundlagen von F#
+- Einführung in F#
 - Funktionale Programmierung in C#
-- Grundlegende Konzepte der funktionalen Komposition
+- Konzepte der funktionalen Komposition

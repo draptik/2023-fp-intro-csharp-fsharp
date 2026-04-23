@@ -8,7 +8,7 @@
 
 ---
 
-### C# 9 🧔🏻
+### C# 9
 
 - (✅) record types
 - 💥 discriminated unions
@@ -40,7 +40,7 @@ public static string Describe(Pet pet) =>
     {
         Cat cat => $"Cat: {cat.Name}",
         Dog dog => $"Dog: {dog.Name}",
-        Bird bird => $"Bird: {bird.Name}"
+        Bird bird => $"Bird: {bird.Name} is a songbird: {bird.Songbird}"
     };
 
 ```

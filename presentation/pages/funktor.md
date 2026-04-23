@@ -22,23 +22,22 @@ todo: bild einfügen
 ```csharp
 // C#
 
-// TODO: redo with CSharpFunctional Extensions und alle Code-Beispiele kurz austesten
-using LaYumba.Functional;
-using static LaYumba.Functional.F;
+using CSharpFunctionalExtensions;
 
-static class X
+public class X
 {
-  string ToUpper(string s) => s.ToUpper();
+        string ToUpper(string s) => s.ToUpper();
 
-  Option<string> StringToOption(string s)
-    => string.IsNullOrEmpty(s) ? None : Some(s)
+        Maybe<string> StringToMaybe(string s)
+            => string.IsNullOrEmpty(s) ? Maybe.None : Maybe.From(s);
 
-  NonEmptyStringToUpper(string s)
-  {
-    var nonEmpty = StringToOption(s);
-    // passt nicht: "string" erwartet, aber "string option" bekommen
-    return ToUpper(s);
-  }
+        Maybe<string> NonEmptyStringToUpper(string s)
+        {
+            var nonEmpty = StringToMaybe(s);
+            // passt nicht: Type "string" erwartet, 
+            // aber "Maybe<string>" aus StringToMaybe bekommen
+            return ToUpper(nonEmpty); // 💥
+        }
 }
 ```
 
@@ -60,7 +59,8 @@ let stringToOption (s: string) : string option =
 
 let nonEmptyStringToUpper (s: string) : ??? =
     let (nonEmpty : string option) = stringToOption s
-    // passt nicht: "string" erwartet, aber "string option" bekommen
+    // passt nicht: "string" erwartet, 
+    // aber "string option" bekommen
     let nonEmptyUpper = toUpper nonEmpty // 💥
 ```
 
@@ -101,5 +101,33 @@ let stringToOption (s: string) : string option =
 
 let nonEmptyStringToUpper (s: string) : string option =
     let nonEmpty = stringToOption s
+    // Lösung: map-Funktion nutzen
     let nonEmptyUpper = Option.map toUpper nonEmpty
+```
+
+----
+
+### Beispiel nochmal in C#
+
+```csharp
+
+using CSharpFunctionalExtensions;
+
+public class X
+{
+        string ToUpper(string s) => s.ToUpper();
+
+        Maybe<string> StringToMaybe(string s)
+            => string.IsNullOrEmpty(s) ? Maybe.None : Maybe.From(s);
+
+        Maybe<string> NonEmptyStringToUpper(string s)
+        {
+            var nonEmpty = StringToMaybe(s);
+           
+           // Lösung: Map-Funktion nutzen
+            return nonEmpty
+                .Map(ToUpper);
+        }
+}
+
 ```

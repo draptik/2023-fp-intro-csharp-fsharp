@@ -67,6 +67,7 @@ let addNumbers (a: int) (b: int) (c: int) : int option =
     let (sum' : (int -> int -> int) option) = Option.map sum positiveA
     let (sum'' : (int -> int) option) = Option.apply sum' positiveB
     let (sum''' : (int) option) = Option.apply sum'' positiveC
+    sum'''
 ```
 
 ---

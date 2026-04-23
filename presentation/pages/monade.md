@@ -20,6 +20,7 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
     // passt nicht: "string option" erwartet, 
     // aber "string option option" bekommen
     let nonEmptyUpper = Option.map toUpper stored // 💥
+    nonEmptyUpper
 ```
 
 ----
@@ -62,4 +63,5 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
     let (nonEmpty : string option) = stringToOption content
     let (stored : string option) = Option.bind (storeInDatabase path) nonEmpty
     let (nonEmptyUpper : string option) = Option.map toUpper stored
+    nonEmptyUpper
 ```

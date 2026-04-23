@@ -8,9 +8,6 @@
 
 ---
 
-# Danke
-
----
 
 ## Ressourcen
 

@@ -2,8 +2,9 @@
 
 ## Code
 
-- [ ] alle Beispiele mit aktuellem `dotnet10` testen
-- [ ] alte Code-Ordner löschen (`code`, `code-dotnet8`)
+- [x] alle Beispiele mit aktuellem `dotnet10` testen
+- [x] LaYumba aus den wichtigen Beispielen rauswerfen, CSharpFunctionalExtensions nehmen
+- [x] alte Code-Ordner löschen (`code`, `code-dotnet8`)
 
 ## Layout
 
@@ -25,5 +26,7 @@
 
 ## AI Slide
 
-Idee: Auch wenn viele Leute in Zukunft nur noch mit Prompts Code generieren lassen, bietet F# durch sein starkes Typsystem
+Idee: 
+- Auch wenn viele Leute in Zukunft nur noch mit Prompts Code generieren lassen, bietet F# durch sein starkes Typsystem
 eine bessere implizite Verifikation durch den Compiler als C#...
+- man kann auch ganz gut die Domäne selbst spezifizieren und dann viel generieren lassen -> auch LLMs profitieren von der "Pit of success"
