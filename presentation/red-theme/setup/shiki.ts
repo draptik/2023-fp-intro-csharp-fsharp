@@ -10,7 +10,9 @@ export default defineShikiSetup(() => {
   return {
     theme: { light, dark },
     colorReplacements: {
+      // vitesse-light comment (#a0ada0) -> darker green for better contrast on light bg
       '#a0ada0': '#4d7c0f',
+      // vitesse-dark comment (#758575, with and without alpha) -> lighter green for dark bg
       '#758575dd': '#a8cc8c',
       '#758575': '#a8cc8c',
     },
