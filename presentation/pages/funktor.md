@@ -21,7 +21,6 @@ todo: bild einfügen
 
 ```csharp
 // C#
-
 using CSharpFunctionalExtensions;
 
 public class X
@@ -110,7 +109,6 @@ let nonEmptyStringToUpper (s: string) : string option =
 ### Beispiel nochmal in C#
 
 ```csharp
-
 using CSharpFunctionalExtensions;
 
 public class X
