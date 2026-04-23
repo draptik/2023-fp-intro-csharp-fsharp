@@ -27,7 +27,7 @@ That's it!
 ```csharp
 public class Customer
 {
-  public string Name { get; set; } // set -> mutable 😡
+    public string Name { get; set; } // set -> mutable 😡
 }
 ```
 
@@ -36,12 +36,12 @@ vs
 ```csharp
 public class Customer
 {
-  public Customer(string name)
-  {
-    Name = name;
-  }
-  
-  public string Name { get; } // <- immutable 😀
+    public Customer(string name)
+    {
+        Name = name;
+    }
+
+    public string Name { get; } // <- immutable 😀
 }
 ```
 
@@ -54,8 +54,8 @@ Classic C#
 ```csharp
 int Add(int a, int b)
 {
-  Console.WriteLine("bla"); // <- side effect!
-  return a + b;
+    Console.WriteLine("bla"); // <- side effect!
+    return a + b;
 }
 ```
 

@@ -11,20 +11,20 @@ Funktionen können als Parameter und Rückgabewert verwendet werden
 ```csharp
 interface ICalculateSalary
 {
-  int ByInput(int i);            // <- Methodensignatur
+    int ByInput(int i);            // <- Methodensignatur
 }
 
 class Manager: ICalculateSalary
 {
-  int ByInput(int i) => i*2;     // <- Implementierung
+    int ByInput(int i) => i*2;     // <- Implementierung
 }
 ```
 
 ```csharp
 class SomeService
 {
-  int DoSomething(ICalculateSalary salary, int i) 
-    => salary.ByInput(i);        // <- "deligiert"
+    int DoSomething(ICalculateSalary salary, int i) 
+        => salary.ByInput(i);        // <- "deligiert"
 }
 ```
 
@@ -37,6 +37,6 @@ class SomeService
 ```csharp
 
 Func<double, string> GetConverterFn(bool withDecimals) 
-  => withDecimals ? ToStringWithDecimals : ToStringNoDecimals;
+    => withDecimals ? ToStringWithDecimals : ToStringNoDecimals;
 }
 ```
