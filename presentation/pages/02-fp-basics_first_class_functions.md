@@ -35,7 +35,6 @@ class SomeService
 ### Funktionen als Rückgabewert
 
 ```csharp
-
 Func<double, string> GetConverterFn(bool withDecimals) 
     => withDecimals ? ToStringWithDecimals : ToStringNoDecimals;
 }
