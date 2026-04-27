@@ -23,6 +23,9 @@ layout: two-cols
   - Soft Skills
 
 ---
+layout: image-right
+image: "/images/roadmap.png"
+---
 
 ## Agenda
 
