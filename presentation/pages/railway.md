@@ -1,27 +1,103 @@
-## Railway Oriented Programming
+## Railway Oriented Programming (1/n)
 
-Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargestellt...
+Eine Metapher für funktionale Fehlerbehandlung
 
----
-
-### Problem: Keine standardisierte Strategie für Fehlerbehandlung
-
-- Wenn wir davon ausgehen, dass Funktionen auch einen Fehlerfall haben, benötigen wir einen **neuen Datentyp**, der das abbilden kann
+- man geht davon aus, dass Fehler passieren
+- der Datentyp "Discriminated Unions" bietet eine gute Grundlage für einen neuen Datentyp
+- in Kombination mit "Functions as 1st class citizens" entstehen neue Patterns...
 
 ---
+layout: two-cols-header
+---
 
-### Result/Either
+## Railway Oriented Programming (2/n)
 
-- kann entweder
-  - das Ergebnis beinhalten, oder
-  - einen Fehlerfall
-- `Either` besteht aus zwei Teilen
-  - `Left`
-  - `Right` ("richtig"...)
-- `Result` besteht aus zwei Teilen
-  - `Failure`
-  - `Success`
+Konzept 1: ein "Result" Typ, mit zwei Ausgabe-Zuständen:
 
+::left::
+
+```fsharp
+type Result<'Ok, 'Error> =
+  | Ok of 'Ok
+  | Error of 'Error
+```
+
+::right::
+
+```fsharp
+type UnvalidatedCustomer = { Name: string }
+type Customer = { Name: string }
+
+let signup (unvalidated: UnvalidatedCustomer) : Result<Customer, string> =
+  if String.IsNullOrEmpty unvalidated.Name then
+    Error "Ups"
+  else
+    Ok Customer { Name = unvalidated }
+```
+
+<style>
+.two-cols-header {
+  column-gap: 15px;
+}
+</style>
+
+---
+layout: two-cols-header
+---
+
+## Railway Oriented Programming (3/n)
+
+foo
+
+::left::
+
+```fsharp
+type Result<'Ok, 'Error> =
+  | Ok of 'Ok
+  | Error of 'Error
+```
+
+::right::
+
+```fsharp
+type SuperCustomer = { Name: string }
+
+let parseSuperCustomer customer : Result<SuperCustomer, string> =
+  if customer.Name <> "super" then
+    Error "Ups - not a super customer"
+  else
+    Ok SuperCustomer { Name = customer }
+```
+
+<style>
+.two-cols-header {
+  column-gap: 15px;
+}
+</style>
+
+---
+layout: two-cols-header
+---
+
+## Railway Oriented Programming (4/n)
+
+Konzept 2: Funktionen, die damit umgehen können (parse, don't validate)
+
+::left::
+
+```fsharp
+// TODO
+```
+
+::right::
+
+TODO
+
+<style>
+.two-cols-header {
+  column-gap: 15px;
+}
+</style>
 ---
 
 - In Railway-Sprech bedeutet dass, dass man "zweigleisig" fährt:
@@ -56,3 +132,10 @@ Funktionale Programmierung wird oft als "Zusammenstecken" von Funktionen dargest
 - wenn die Eingabe fehlerhaft ist, muss die Funktion nichts tun, und kann den Fehler weiterreichen
 - wenn die Eingabe nicht fehlerhaft ist, wird der Wert an die Funktion gegeben
 - Damit können wir elegant beliebig lange Ketten bauen
+
+```csharp
+public static Result<TIn, TOut> Bind(this Result<TIn, TOut>, Func<Tin, TOut> f)
+{
+  // TODO
+}
+```
