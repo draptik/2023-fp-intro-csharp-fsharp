@@ -24,7 +24,7 @@
 
 ## Summary Slide
 
-- [ ] QR-Code aktualisieren
+- [x] QR-Code aktualisieren
 
 ## AI Slide
 
