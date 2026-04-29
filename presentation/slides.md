@@ -53,15 +53,15 @@ src: ./pages/libraries.md
 ---
 
 ---
-src: ./pages/railway.md
----
-
----
 src: ./pages/funktor.md
 ---
 
 ---
 src: ./pages/monade.md
+---
+
+---
+src: ./pages/railway.md
 ---
 
 ---
