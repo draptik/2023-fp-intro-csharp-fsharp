@@ -66,7 +66,7 @@ let unvalidated = "foo@bar.baz"
 ```
 
 ```fsharp
-// "Zu Fuß" - Pyramide of Doom
+// "Zu Fuß" - Pyramid of Doom
 let result =
     match tryParseEmail unvalidated with
     | Error e1 -> e1
@@ -116,7 +116,7 @@ string input = "foo@bar.baz";
 ```
 
 ```csharp
-// "Zu Fuß" - Pyramide of Doom
+// "Zu Fuß" - Pyramid of Doom
 var result =
   TryParseEmail(input)
     .Match(
