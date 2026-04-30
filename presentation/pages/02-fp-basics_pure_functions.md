@@ -1,24 +1,35 @@
 ## FP 101 - Pure Functions
 
-### Pure Functions in C# #
+- haben keine Seiteneffekte ("idempotent")
+- in C#: sollten immer nach `static` umwandelbar sein
+- Beispiele:
+  - `int result = 1 + 2` sollte immer das gleiche Ergebnis zurückliefern
+  - auch ein HTTP-Endpoint sollte beim erfolgreichen Neuanlegen eines Eintrags
+    - immer den Status-Code 201 zurückliefern ("idempotent")
+    - auch wenn sich natürlich die Datenbank verändert hat
 
-- haben keine Seiteneffekte
-- sollten immer nach `static` umwandelbar sein
-
+---
+layout: two-cols-header
 ---
 
 ## Imperativ...
 
 **Wie** mache ich etwas
 
+::left::
+
 ```csharp
-var people = new List<Person>();
+var people = new List<Person>
 {
     new Person { Age = 20, Income = 1000 },
     new Person { Age = 26, Income = 1100 },
     new Person { Age = 35, Income = 1300 }
 };
+```
 
+::right::
+
+```csharp
 var incomes = new List<int>();
 foreach (var person in people)
 {
@@ -31,29 +42,49 @@ var avg = incomes.Sum() / incomes.Count;
 
 versus...
 
+<style>
+.two-cols-header {
+  column-gap: 15px;
+}
+</style>
+
+---
+layout: two-cols-header
 ---
 
 ## Deklarativ
 
 **Was** will ich erreichen?
 
-Bsp: Filter / Map / Reduce
+::left::
 
 ```csharp
-var people = new List<Person> {
+var people = new List<Person>
+{
     new Person { Age = 20, Income = 1000 },
     new Person { Age = 26, Income = 1100 },
     new Person { Age = 35, Income = 1300 }
 }
-
-var averageIncomeAbove25 = people
-    .Where(p => p.Age > 25) // "Filter"
-    .Select(p => p.Income)  // "Map"
-    .Average();             // "Reduce"
 ```
 
 - aussagekräftiger
 - weniger fehleranfällig
+
+::right::
+
+```csharp
+var averageIncomeAbove25 = 
+    people
+      .Where(p => p.Age > 25) // "Filter"
+      .Select(p => p.Income)  // "Map"
+      .Average();             // "Reduce"
+```
+
+<style>
+.two-cols-header {
+  column-gap: 15px;
+}
+</style>
 
 ---
 

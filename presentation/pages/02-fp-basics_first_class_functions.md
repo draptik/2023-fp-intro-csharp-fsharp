@@ -1,12 +1,8 @@
-## FP 101 - functions
-
-### 1st class functions in C#
+## FP 101 - Functions as first class citizens
 
 Funktionen können als Parameter und Rückgabewert verwendet werden
 
----
-
-### Anwendung: Strategy-Pattern
+Klassische OOP-Lösung: Strategy-Pattern
 
 ```csharp
 interface ICalculateSalary
@@ -23,19 +19,41 @@ class Manager: ICalculateSalary
 ```csharp
 class SomeService
 {
-    int DoSomething(ICalculateSalary salary, int i) 
-        => salary.ByInput(i);        // <- "deligiert"
+    int DoSomething(ICalculateSalary salary, int i) // <- "inject"
+        => salary.ByInput(i);                       // <- "deligiert"
 }
 ```
 
 (Verhalten als Parameter übergeben)
 
 ---
+layout: two-cols-header
+---
 
-### Funktionen als Rückgabewert
+## FP 101 - Functions as first class citizens
+
+...geht auch "funktional" in C# 😎
+
+::left::
 
 ```csharp
-Func<double, string> GetConverterFn(bool withDecimals) 
-    => withDecimals ? ToStringWithDecimals : ToStringNoDecimals;
-}
+// Funktion empfangen
+double CalcSalary(Func<int, double> calc, int salary) 
+    => calc(salary);
 ```
+
+::right::
+
+```csharp
+// Funktion zurückgeben
+Func<double, string> GetConverterFn(bool withDecimals) 
+    => withDecimals 
+        ? ToStringWithDecimals 
+        : ToStringNoDecimals;
+```
+
+<style>
+.two-cols-header {
+  column-gap: 15px;
+}
+</style>

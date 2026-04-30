@@ -40,13 +40,11 @@ override int GetHashCode() { /* ... */ }
 
 ### Exkurs
 
-- manchmal genügt ein (leichtgewichtiger) C# record
-- aber: eigentlich will man soviel Logik wie möglich in ein Objekt packen (OO, Value Object, DDD)
-- (OO vs FP) und DDD
-  - OO: Objekt mit Verhalten -> Ursprung von Value Object (und DDD)
-  - FP: Strikte Trennung von Daten und Verhalten
+- ⚠️ Unterschied OOP vs FP ⚠️
+  - OOP: **Objekte sollen Verhalten besitzen** (anämische Modelle sind ein Antipattern in der OO-Welt)
+  - FP: Üblicherweise **Trennung von Datenstruktur und Verhalten**
 
-Das Schöne an den unterschiedlichen Meinungen ist:
+Das Schöne an den unterschiedlichen Paradigmen ist:
 
 - man kann es situationsbedingt einfach lösen
 - Und sich das Beste rauspicken
@@ -65,7 +63,7 @@ Das Schöne an den unterschiedlichen Meinungen ist:
 ### Vogen
 
 ```csharp
-[ValueObject<int>]
+[ValueObject<int>] // <--
 public partial struct CustomerId;
 
 CustomerId customerId = CustomerId.From(123);

@@ -1,24 +1,9 @@
-# Grundlagen der funktionalen Programmierung
+## Grundlagen: FP 101
 
-todo: Bild einfügen
-
-<!--
-<img
-  class="absolute bottom-10 left-20 w-180"
-  src="/images/tbd.png"
-/>
--->
-
----
-
-## FP 101
-
+- Immutability
 - Functions as First Class Citizens
-- (Immutability)
-- (Pure Functions)
-- (Komposition)
-
-That's it!
+- Pure Functions
+- Komposition
 
 ---
 
