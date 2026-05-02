@@ -15,7 +15,7 @@ Eine Metapher für funktionale Fehlerbehandlung
 layout: two-cols-header
 ---
 
-## Railway Oriented Programming (2/6)
+### Railway Oriented Programming (2/6)
 
 Konzept 1: ein "Result" Typ, mit zwei Ausgabe-Zuständen:
 
@@ -55,7 +55,7 @@ let tryParseCompanyEmail (input: string) : Result<string, string> =
 layout: two-cols-header
 ---
 
-## Railway Oriented Programming (3/6)
+### Railway Oriented Programming (3/6)
 
 Konzept 2: Funktion, die damit umgehen kann - "Bind" (F#-Version)
 
@@ -105,7 +105,7 @@ let bind f m =
 layout: two-cols-header
 ---
 
-## Railway Oriented Programming (4/6)
+### Railway Oriented Programming (4/6)
 
 Konzept 2: Funktion, die damit umgehen kann - "Bind" (C#-Version)
 
@@ -156,7 +156,7 @@ public static Result<T> MyBind<T>(
 
 ---
 
-## Railway Oriented Programming (5/6)
+### Railway Oriented Programming (5/6)
 
 **Bind** ermöglicht einer Funktion mit 1 Eingabe den Umgang mit Result-Typen (2 Ausgaben)
 
@@ -167,7 +167,7 @@ public static Result<T> MyBind<T>(
 
 ---
 
-## Railway Oriented Programming (6/6)
+### Railway Oriented Programming (6/6)
 
 - wenn die Eingabe fehlerhaft ist, muss die Funktion nichts tun, und kann den Fehler weiterreichen
 - wenn die Eingabe nicht fehlerhaft ist, wird der Wert an die Funktion gegeben

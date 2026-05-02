@@ -1,6 +1,9 @@
 # Grundlegende Konzepte der funktionalen Komposition
 
-todo: bild einfügen
+<img
+  class="absolute top-25 right-10 w-130"
+  src="/images/cartoon_fp_scene.svg"
+/>
 
 ---
 
@@ -17,7 +20,7 @@ todo: bild einfügen
 
 ---
 
-### Problem: Wert in Container, Funktion kann nichts damit anfangen
+### Problem: Wert in Container, Funktion kann nichts damit anfangen (C#)
 
 ```csharp
 // C#
@@ -25,24 +28,26 @@ using CSharpFunctionalExtensions;
 
 public class X
 {
+    // erwartet als Parameter den Typ "string":
     string ToUpper(string s) => s.ToUpper();
 
-    Maybe<string> StringToMaybe(string s)
-        => string.IsNullOrEmpty(s) ? Maybe.None : Maybe.From(s);
+    // Ergebnis ist "eingepackt":
+    Maybe<string> StringToMaybe(string s) => string.IsNullOrEmpty(s) ? Maybe.None : Maybe.From(s);
 
+    // Versuch, die Methoden zu kombinieren:
     Maybe<string> NonEmptyStringToUpper(string s)
     {
-        var nonEmpty = StringToMaybe(s);
-        // passt nicht: Type "string" erwartet, 
-        // aber "Maybe<string>" aus StringToMaybe bekommen
-        return ToUpper(nonEmpty); // 💥
+        var nonEmpty = StringToMaybe(s); // <- gibt "eingepackten" Wert zurück
+
+        return ToUpper(nonEmpty); // 💥 passt nicht: Type "string" erwartet,
+                                  // aber "Maybe<string>" aus StringToMaybe bekommen
     }
 }
 ```
 
 ---
 
-### Problem: Wert in Container, Funktion kann nichts damit anfangen
+### Problem: Wert in Container, Funktion kann nichts damit anfangen (F#)
 
 ```fsharp
 // F#
@@ -57,10 +62,11 @@ let stringToOption (s: string) : string option =
         Some s
 
 let nonEmptyStringToUpper (s: string) : ??? =
-    let (nonEmpty : string option) = stringToOption s
-    // passt nicht: "string" erwartet, 
-    // aber "string option" bekommen
-    let nonEmptyUpper = toUpper nonEmpty // 💥
+    let (nonEmpty : string option) = stringToOption s // <- gibt "eingepackten" Wert zurück
+
+    let nonEmptyUpper = toUpper nonEmpty  // 💥 passt nicht: "string" erwartet,
+                                          // aber "string option" bekommen
+
 ```
 
 ---
@@ -80,6 +86,9 @@ let nonEmptyStringToUpper (s: string) : ??? =
     map: (a -> b) -> F a -> F b
 ```
 
+- `(a -> b)`: Funktion, die `a` bekommt, und `b` zurückgibt
+- `F a`: `a` in einen Funktor `F` verpackt
+- `F b`: `b` in einen Funktor `F` verpackt
 - Andere Bezeichnungen für "map": fmap (z.B. in Haskell), Select (LINQ), &lt;$&gt;, &lt;!&gt;
 
 ---
@@ -100,8 +109,10 @@ let stringToOption (s: string) : string option =
 
 let nonEmptyStringToUpper (s: string) : string option =
     let nonEmpty = stringToOption s
+
     // Lösung: map-Funktion nutzen
     let nonEmptyUpper = Option.map toUpper nonEmpty
+                     // ^^^^^^^^^^
 ```
 
 ---
@@ -125,6 +136,7 @@ public class X
         // Lösung: Map-Funktion nutzen
         return nonEmpty
             .Map(ToUpper);
+         // ^^^^
     }
 }
 ```

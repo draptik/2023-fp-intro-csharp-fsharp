@@ -1,4 +1,4 @@
-### Problem: Verkettung eingepackter Werte
+### Nächstes Problem: Verkettung eingepackter Werte
 
 ```fsharp
 let storeInDatabase (path: string) (content: string) : string option = 
@@ -8,18 +8,19 @@ let storeInDatabase (path: string) (content: string) : string option =
     with
         ex -> None
 
-let stringToOption (s: string) : string option =
-    if String.IsNullOrWhiteSpace s then None else Some s
-
+let stringToOption (s: string) : string option = if String.IsNullOrWhiteSpace s then None else Some s
 let toUpper (s: string) : string = s.ToUpper()
 
 let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) : ??? =
     let (nonEmpty : string option) = stringToOption content
-    // passt nicht: "string" erwartet, aber "string option" bekommen
-    let (stored : string option option)= storeInDatabase path nonEmpty // 💥
-    // passt nicht: "string option" erwartet, 
-    // aber "string option option" bekommen
-    let nonEmptyUpper = Option.map toUpper stored // 💥
+
+    // Achtung: wird doppelt verpackt!
+    let (stored : string option option)= storeInDatabase path nonEmpty // 💥 passt nicht: "string" erwartet,
+                                                                       // aber "string option" bekommen
+
+    let nonEmptyUpper = Option.map toUpper stored // 💥 passt nicht: "string option" erwartet,
+                                                  // aber "string option option" bekommen
+
     nonEmptyUpper
 ```
 
@@ -40,7 +41,10 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
     bind: (a -> M b) -> M a -> M b
 ```
 
-- Andere Bezeichnungen für "bind": flatMap, SelectMany (LINQ), &gt;&gt;=
+- `(a -> M b)`: Funktion, die `a` bekommt, und `b` in `M` verpackt zurückgibt
+- `M a`: `a` in eine Monade `M` verpackt
+- `M b`: `b` in eine Monade `M` verpackt
+-- Andere Bezeichnungen für "bind": flatMap, SelectMany (LINQ), &gt;&gt;=
 
 ---
 
@@ -62,6 +66,7 @@ let toUpper (s: string) : string = s.ToUpper()
 let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) : string option =
     let (nonEmpty : string option) = stringToOption content
     let (stored : string option) = Option.bind (storeInDatabase path) nonEmpty
+                                // ^^^^^^^^^^^
     let (nonEmptyUpper : string option) = Option.map toUpper stored
     nonEmptyUpper
 ```

@@ -69,17 +69,28 @@ let mutable y = 3
 y <- 42
 ```
 
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
+
 ---
 
 ## Typ-Inferenz
 
 ```fsharp
 // Typen werden automatisch geschlussfolgert sofern möglich
-let double a = a * 2 // int -> int
+let timesTwo a = a * 2 // int -> int
 
 // Explizite Angaben möglich
-let doubleExplicit (a: int) : int = a * 2
+let timesTwoExplicit (a: int) : int = a * 2
+//                       ^^^  ^^^^^
 ```
+
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
 
 ---
 
@@ -93,6 +104,11 @@ let doubleExplicit (a: int) : int = a * 2
 let addThree a b c = a + b + c
 ```
 
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
+
 ---
 
 ## Partial Application
@@ -103,10 +119,16 @@ let addThree a b c = a + b + c
 ```fsharp
 // Partial Application
 let add a b = a + b // int -> (int -> (int))
+
 let add2 = add 2 // (int -> (int)), "a" ist mit 2 ausgefüllt, "b" ist noch offen
 let six = add2 4 // (int)
 let ten = add2 8 // (int)
 ```
+
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
 
 ---
 
@@ -120,14 +142,19 @@ let triple a = a * 3
 4 |> triple |> triple // ergibt 36
 ```
 
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
+
 ---
 
 ## Discriminated Unions
 
-- vielleicht auch in C# 15
+- vielleicht auch in C# 15?
 
 ```fsharp
-// Discriminated Unions ("Tagged Union", "Sum Type", "Choice Type")
+// Discriminated Unions (aka "Tagged Union", "Sum Type", "Choice Type")
 type Vehicle = Bike | Car | Bus
 
 // Pattern Matching zur Behandlung der verschiedenen Fälle
@@ -137,8 +164,12 @@ let laneText =
     | Bike -> "Use the bike lane"
     | Car -> "Use the car lane"
     | Bus -> "The bus uses its own lane"
-
 ```
+
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
 
 ---
 
@@ -156,6 +187,11 @@ match c with
 | Circle radius -> radius * radius * System.Math.PI
 | Rectangle(width, height) -> width * height
 ```
+
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
 
 ---
 
@@ -178,6 +214,11 @@ let shoppingCart = {
 }
 ```
 
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
+
 ---
 
 ## Record Types
@@ -187,6 +228,11 @@ let shoppingCart = {
 - Structural Equality
 - Hint: C# Value Objects out of the box
 - ✨ seit C# 9: `records`
+
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
 
 ---
 
@@ -201,6 +247,11 @@ let equal = (thing1 = thing2) // true
 ```
 
 - Record Types mit Structural Equality sind ideal, um sehr kompakt "Value Objects" ausdrücken zu können
+
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>
 
 ---
 
@@ -217,3 +268,8 @@ type NonEquatableNonComparable = {
 
 let compare n1 n2 = (n1.Id = n2.Id)
 ```
+
+<img
+  class="absolute bottom-10 right-10 w-60"
+  src="/images/fsharp256.png"
+/>

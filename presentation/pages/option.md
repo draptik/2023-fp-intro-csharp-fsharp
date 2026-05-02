@@ -2,6 +2,11 @@
 
 #### oder: null ist gefährlich.
 
+<img
+  class="absolute bottom-10 left-20 w-130"
+  src="/images/meme-null.jpg"
+/>
+
 ---
 
 ### Enthält die Signatur die ganze Wahrheit?
@@ -44,7 +49,9 @@ type Option<'T> = Some<'T> | None
 public Option<int> IntifyOption(string s)
 {
     bool success = int.TryParse(s, out var result);
-    return success ? Some(result) : None;
+    return success
+        ? Some(result)
+        : None;
 }
 ```
 

@@ -1,6 +1,6 @@
 # Funktionale Programmierung in C#
 
-### Was ist heute schon möglich in C#
+### Was ist heute schon möglich in C#?
 
 - die Entwicklung von C# geht in eine funktionale Richtung
 - vieles geht mit Libraries auch heute schon in C#

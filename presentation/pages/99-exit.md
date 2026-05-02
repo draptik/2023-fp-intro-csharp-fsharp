@@ -48,5 +48,5 @@ Slides:
 - <logos-linkedin-icon /> <https://www.linkedin.com/in/martin-grotz/>
   
 <img
-  class="absolute bottom-0 right-50 w-60"
+  class="absolute bottom-20 right-50 w-60"
   src="/images/qr-code-magdeburger-devdays-2026-draptik.png" >
