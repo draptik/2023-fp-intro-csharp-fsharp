@@ -8,9 +8,10 @@
 
 ## Layout
 
+- [ ] Zitate ansprechender formatieren (`blockquote`...)
 - [x] Code Formatierung: Kommentare sollten wir besser sichtbar machen
   - erster Versuch
-- [ ] ein paar Bilder einfügen auf den "Kapitel-Start"-Slides
+- [x] ein paar Bilder einfügen auf den "Kapitel-Start"-Slides
 - [x] `two-column` Layout
   - Fußzeile fehlt
   - [x] Abstand zwischen linkem und rechtem Codeblocks fehlt
