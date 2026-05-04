@@ -12,5 +12,6 @@ config:
   MD025: false # single title
   MD026: false # no trailing punctuation in headings
   MD033: false # no inline html
+  MD036: false # no emphasis
   MD041: false # allow non-h1 header
   MD045: false # no alt text

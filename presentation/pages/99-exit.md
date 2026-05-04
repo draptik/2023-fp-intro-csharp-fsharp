@@ -4,13 +4,17 @@
 - Ideen der Funktionalen Programmierung können auch "nicht-funktionalen" Code verbessern
 - Zusätzliches Werkzeug im Werkzeugkasten
 
-### Die Beschäftigung damit lohnt sich!
+**👉 Die Beschäftigung damit lohnt sich! 😎**
 
+---
+layout: two-cols-header-with-footer
 ---
 
 ## Ressourcen
 
-- FP
+::left::
+
+- FP (allgemein)
   - Blog: [Mark Seeman](https://blog.ploeh.dk/)
   - Book: [Domain Modeling Made Functional](https://pragprog.com/book/swdddf/domain-modeling-made-functional)
   - Book: [Grokking Simplicity](https://www.manning.com/books/grokking-simplicity)
@@ -18,11 +22,18 @@
   - Book: [Functional Programming in C#](https://www.manning.com/books/functional-programming-in-c-sharp)
   - Book: [Functional Programming with C#](https://www.oreilly.com/library/view/functional-programming-with/9781805122685/)
   - Blog: [Vladimir Khorikov](https://enterprisecraftsmanship.com/)
+
+::right::
+
 - F#
   - Website: [F# Homepage](https://fsharp.org/)
   - Blog: [F# for Fun and Profit](https://fsharpforfunandprofit.com/)
   - Blog: [Railway Oriented Programming](https://fsharpforfunandprofit.com/rop/)
   - Book: [F# in Action](https://www.manning.com/books/f-sharp-in-action)
+
+<img
+  class="absolute bottom-10 right-40 w-70"
+  src="/images/addressbook1.png" >
 
 ---
 layout: two-cols
@@ -34,7 +45,7 @@ layout: two-cols
 - <logos-github-icon /> <https://github.com/draptik>
 - <logos-linkedin-icon /> <https://www.linkedin.com/in/patrick-drechsler-draptik/>
 
-Slides:
+**Slides:**
 
 - QR-Code 👉
 - <https://draptik.github.io/2026-05-md-dev-days-fp-intro-csharp-fsharp/>
@@ -46,7 +57,7 @@ Slides:
 - <mdi-email /> <martin.grotz@gmx.de>
 - <logos-github-icon /> <https://github.com/groma84>
 - <logos-linkedin-icon /> <https://www.linkedin.com/in/martin-grotz/>
-  
+
 <img
   class="absolute bottom-20 right-50 w-60"
   src="/images/qr-code-magdeburger-devdays-2026-draptik.png" >
