@@ -8,7 +8,7 @@
 
 ## Layout
 
-- [ ] Zitate ansprechender formatieren (`blockquote`...)
+- [x] Zitate ansprechender formatieren (`blockquote`...)
 - [x] Code Formatierung: Kommentare sollten wir besser sichtbar machen
   - erster Versuch
 - [x] ein paar Bilder einfügen auf den "Kapitel-Start"-Slides
