@@ -60,6 +60,10 @@
     padding-bottom: 1rem;
     padding-left: 0.5rem;
   }
+
+  p > strong {
+    font-size: larger;
+  }
 }
 
 .slidev-layout.footer {
