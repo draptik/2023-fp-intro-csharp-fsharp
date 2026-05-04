@@ -2,7 +2,10 @@
 layout: two-cols
 ---
 
-## Patrick Drechsler
+<div class="flex items-center gap-4 mb-4">
+  <img src="/images/drechsler-profile.png" class="rounded-full w-24 h-24" />
+  <h2>Patrick Drechsler</h2>
+</div>
 
 - Software Entwickler
 - Beruflich: C#
@@ -13,7 +16,10 @@ layout: two-cols
 
 ::right::
 
-## Martin Grotz
+<div class="flex items-center gap-4 mb-4">
+  <h2>Martin Grotz</h2>
+  <img src="/images/grotz-profile.jpg" class="rounded-full w-24 h-24" />
+</div>
 
 - Team Lead
 - Beruflich: C#

@@ -5,6 +5,10 @@
 - Pure Functions
 - Komposition
 
+<img
+  class="absolute bottom-10 right-0 w-140"
+  src="/images/strandkind_muecke-woods-7661735.jpg" >
+
 ---
 
 ### Immutability in C#
