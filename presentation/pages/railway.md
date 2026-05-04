@@ -12,7 +12,7 @@ Eine Metapher für funktionale Fehlerbehandlung
 - in Kombination mit "Functions as 1st class citizens" entsteht etwas Neues
 
 ---
-layout: two-cols-header
+layout: two-cols-header-with-footer
 ---
 
 ### Railway Oriented Programming (2/6)
@@ -45,14 +45,8 @@ let tryParseCompanyEmail (input: string) : Result<string, string> =
         Error $"'{input}' is not a valid company email"
 ```
 
-<style>
-.two-cols-header {
-  column-gap: 15px;
-}
-</style>
-
 ---
-layout: two-cols-header
+layout: two-cols-header-with-footer
 ---
 
 ### Railway Oriented Programming (3/6)
@@ -95,14 +89,8 @@ let bind f m =
     | Ok inner -> f(inner)
 ```
 
-<style>
-.two-cols-header {
-  column-gap: 15px;
-}
-</style>
-
 ---
-layout: two-cols-header
+layout: two-cols-header-with-footer
 ---
 
 ### Railway Oriented Programming (4/6)
@@ -147,12 +135,6 @@ public static Result<T> MyBind<T>(
     ? Result.Failure<T>(input.Error) 
     : func(input.Value);
 ```
-
-<style>
-.two-cols-header {
-  column-gap: 15px;
-}
-</style>
 
 ---
 

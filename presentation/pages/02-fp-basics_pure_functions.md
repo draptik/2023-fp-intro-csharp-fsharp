@@ -9,7 +9,7 @@
     - auch wenn sich natürlich die Datenbank verändert hat
 
 ---
-layout: two-cols-header
+layout: two-cols-header-with-footer
 ---
 
 ## Imperativ...
@@ -29,6 +29,8 @@ var people = new List<Person>
 
 ::right::
 
+<v-click>
+
 ```csharp
 var incomes = new List<int>();
 foreach (var person in people)
@@ -42,14 +44,10 @@ var avg = incomes.Sum() / incomes.Count;
 
 versus...
 
-<style>
-.two-cols-header {
-  column-gap: 15px;
-}
-</style>
+</v-click>
 
 ---
-layout: two-cols-header
+layout: two-cols-header-with-footer
 ---
 
 ## Deklarativ
@@ -67,10 +65,9 @@ var people = new List<Person>
 }
 ```
 
-- aussagekräftiger
-- weniger fehleranfällig
-
 ::right::
+
+<v-click>
 
 ```csharp
 var averageIncomeAbove25 = 
@@ -80,11 +77,10 @@ var averageIncomeAbove25 =
       .Average();             // "Reduce"
 ```
 
-<style>
-.two-cols-header {
-  column-gap: 15px;
-}
-</style>
+- aussagekräftiger
+- weniger fehleranfällig
+
+</v-click>
 
 ---
 

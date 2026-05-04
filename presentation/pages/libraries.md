@@ -61,7 +61,7 @@ public static string Describe(Pet pet) =>
 - dunet [https://github.com/domn1995/dunet](https://github.com/domn1995/dunet)
 
 ---
-layout: two-cols-header
+layout: two-cols-header-with-footer
 ---
 
 ### OneOf
@@ -108,11 +108,6 @@ public void Shape_tests()
 }
 ```
 
-<style>
-.two-cols-header {
-  column-gap: 15px;
-}
-</style>
 <!-- <style>
 .slidev-code * {
     font-size: smaller !important;
@@ -120,7 +115,7 @@ public void Shape_tests()
 </style> -->
 
 ---
-layout: two-cols-header
+layout: two-cols-header-with-footer
 ---
 
 ### dunet
@@ -160,9 +155,3 @@ var areaMatch = shape.Match(
     rectangle => rectangle.Length * rectangle.Width
 );
 ```
-
-<style>
-.two-cols-header {
-  column-gap: 15px;
-}
-</style>

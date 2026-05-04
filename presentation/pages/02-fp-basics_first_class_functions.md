@@ -27,7 +27,7 @@ class SomeService
 (Verhalten als Parameter übergeben)
 
 ---
-layout: two-cols-header
+layout: two-cols-header-with-footer
 ---
 
 ## FP 101 - Functions as first class citizens
@@ -51,9 +51,3 @@ Func<double, string> GetConverterFn(bool withDecimals)
         ? ToStringWithDecimals 
         : ToStringNoDecimals;
 ```
-
-<style>
-.two-cols-header {
-  column-gap: 15px;
-}
-</style>
