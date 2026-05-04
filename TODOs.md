@@ -11,7 +11,7 @@
 - [x] Code Formatierung: Kommentare sollten wir besser sichtbar machen
   - erster Versuch
 - [ ] ein paar Bilder einfügen auf den "Kapitel-Start"-Slides
-- [ ] `two-column` Layout
+- [x] `two-column` Layout
   - Fußzeile fehlt
   - [x] Abstand zwischen linkem und rechtem Codeblocks fehlt
 - [x] allg.: wirkt etwas "holprig" -> wir müssen die Header-Level vereinheitlichen, es wird wild zwischen h2 h3 h4 gesprungen, ODER allen headern ab h2 die gleiche line-height verpassen

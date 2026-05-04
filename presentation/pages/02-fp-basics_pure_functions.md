@@ -87,3 +87,7 @@ var averageIncomeAbove25 =
 ## Pure functions in LINQ
 
 - ihr macht schon FP: LINQ und Lambdas!
+
+<img
+  class="absolute bottom-10 right-40 w-190"
+  src="/images/pure_functions_hand_drawn_clean.svg" >
