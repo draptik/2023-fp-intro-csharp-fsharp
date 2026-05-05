@@ -6,4 +6,4 @@
 
 <img
   class="absolute top-0 right-0 w-90"
-  src="/images/AMO_bei_Nacht.jpg" >
+  src="/images/AMO_bei_Nacht.jpg" />
