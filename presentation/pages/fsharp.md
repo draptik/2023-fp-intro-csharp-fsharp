@@ -70,7 +70,7 @@ y <- 42
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -88,7 +88,7 @@ let timesTwoExplicit (a: int) : int = a * 2
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -105,7 +105,7 @@ let addThree a b c = a + b + c
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -126,7 +126,7 @@ let ten = add2 8 // (int)
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -143,7 +143,7 @@ let triple a = a * 3
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -167,7 +167,7 @@ let laneText =
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -189,7 +189,7 @@ match c with
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -215,7 +215,7 @@ let shoppingCart = {
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -230,7 +230,7 @@ let shoppingCart = {
 - ✨ seit C# 9: `records`
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -249,7 +249,7 @@ let equal = (thing1 = thing2) // true
 - Record Types mit Structural Equality sind ideal, um sehr kompakt "Value Objects" ausdrücken zu können
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
 
@@ -270,6 +270,6 @@ let compare n1 n2 = (n1.Id = n2.Id)
 ```
 
 <img
-  class="absolute bottom-10 right-10 w-60"
+  class="absolute bottom-10 right-10 w-60 opacity-30"
   src="/images/fsharp256.png"
 />
