@@ -1,0 +1,26 @@
+when:
+  - event: push
+    branch: 2026-magdeburger-dev-days
+
+steps:
+  - name: build
+    image: node:24-alpine
+    commands:
+      - cd presentation && npm ci && npm run build
+
+  - name: deploy
+    image: alpine/git
+    environment:
+      CODEBERG_TOKEN:
+        from_secret: codeberg_token
+    commands:
+      - git config --global user.email "ci@noreply.codeberg.org"
+      - git config --global user.name "Woodpecker CI"
+      - echo "machine codeberg.org login oauth2 password $CODEBERG_TOKEN" > ~/.netrc
+      - chmod 600 ~/.netrc
+      - "git clone --branch pages --single-branch https://codeberg.org/draptik/fp-intro-csharp-fsharp.git /tmp/pages || (git clone https://codeberg.org/draptik/fp-intro-csharp-fsharp.git /tmp/pages && git -C /tmp/pages checkout --orphan pages)"
+      - rm -rf /tmp/pages/*
+      - cp -r presentation/dist/. /tmp/pages/
+      - git -C /tmp/pages add -A
+      - "git -C /tmp/pages diff --cached --quiet || git -C /tmp/pages commit -m \"deploy: ${CI_COMMIT_SHA}\""
+      - git -C /tmp/pages push https://codeberg.org/draptik/fp-intro-csharp-fsharp.git pages
