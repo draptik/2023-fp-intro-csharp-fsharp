@@ -6,7 +6,7 @@ steps:
   - name: build
     image: node:24-alpine
     commands:
-      - cd presentation && npm ci && npm run build
+      - cd presentation && npm ci && npm run build -- --base /fp-intro-csharp-fsharp/
 
   - name: deploy
     image: alpine/git
