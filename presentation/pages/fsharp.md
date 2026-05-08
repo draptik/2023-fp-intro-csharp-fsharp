@@ -181,9 +181,9 @@ type Shape =
     | Circle of float
     | Rectangle of float * float
 
-let c = Circle 42.42
+let shape = Circle 42.42
 
-match c with
+match shape with
 | Circle radius -> radius * radius * System.Math.PI
 | Rectangle(width, height) -> width * height
 ```
