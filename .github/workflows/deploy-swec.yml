@@ -2,7 +2,7 @@ name: Deploy pages
 on:
   push:
     branches:
-      - 2026-swec
+      - 2026-05-swec
 
 jobs:
   deploy:
