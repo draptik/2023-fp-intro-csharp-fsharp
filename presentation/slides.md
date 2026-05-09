@@ -5,8 +5,8 @@ defaults:
   layout: "default-with-footer"
 
 # infos for the footer (on slides with the default-with-footer layout)
-occasion: "Magdeburger DevDays 2026"
-occasionLogoUrl: "images/magdeburger-dev-days-logo.jpeg"
+occasion: "SWEC 2026"
+occasionLogoUrl: "images/SWEC-logo.png"
 company: ""
 presenter: "Patrick Drechsler & Martin Grotz"
 contact: "patrick.drechsler@mathema.de & martin.grotz@danfoss.com"

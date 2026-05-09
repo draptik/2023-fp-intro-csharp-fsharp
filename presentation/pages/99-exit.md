@@ -48,7 +48,7 @@ layout: two-cols
 **Slides:**
 
 - QR-Code 👉
-- <https://draptik.github.io/2026-05-md-dev-days-fp-intro-csharp-fsharp/>
+- <https://draptik.github.io/2026-05-swec-fp-intro-csharp-fsharp/>
 
 ::right::
 
@@ -60,4 +60,4 @@ layout: two-cols
 
 <img
   class="absolute bottom-20 right-50 w-60"
-  src="/images/qr-code-magdeburger-devdays-2026-draptik.png" >
+  src="/images/qr-code-swec-2026-draptik.png" >
