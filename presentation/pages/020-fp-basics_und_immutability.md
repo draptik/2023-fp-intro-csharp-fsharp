@@ -11,13 +11,17 @@
 
 ---
 
-## Immutability in C#
+## Immutability in C# 🧔
 
 Damit ein (C#) Objekt unveränderlich wird, muss gewährleistet sein,<br> dass es auch **nach Erstellung nicht verändert wird**.
+
+<v-clicks :fade="true">
 
 - interne Werte dürfen ausschließlich vom Konstruktor verändert werden
 - keine public oder private setters
 - kein parameterloser Konstrukor
+
+</v-clicks>
 
 ---
 
@@ -58,6 +62,8 @@ C# records sind ein erster Schritt in die richtige Richtung:
 ```csharp
 var x2 = x1 with {Value = 42};
 ```
+
+- evtl. auch `readonly record struct` verwenden
 
 ---
 

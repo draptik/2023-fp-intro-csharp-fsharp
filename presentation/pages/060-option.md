@@ -1,15 +1,26 @@
 ## Option: Mögliches Vorhandensein eines Werts
 
-#### oder: null ist gefährlich.
+...oder: NULL ist gefährlich (["Billion-Dollar Mistake"](https://en.wikipedia.org/wiki/Tony_Hoare#Research_and_career))
+
+<streamline-ultimate-money-bag-dollar-bold class="absolute top-45 right-70 text-[80px]"/>
 
 <img
-  class="absolute bottom-10 left-20 w-130"
-  src="/images/meme-null.jpg"
+  class="absolute top-30 left-15 w-130"
+  src="/images/meme-null.png"
+/>
+
+<img
+  class="absolute top-33 right-15 w-50"
+  src="/images/Sir_Tony_Hoare.jpg"
 />
 
 ---
+layout: two-cols-header-with-footer
+---
 
 ### Enthält die Signatur die ganze Wahrheit?
+
+::left::
 
 ```csharp
 // Enthält die Signatur die ganze Wahrheit?
@@ -18,6 +29,8 @@ public string Stringify<T>(T data)
     return null;
 }
 ```
+
+::right::
 
 ```csharp
 // Sind Magic Values eine gute Idee?
@@ -76,7 +89,11 @@ public string Stringify<T>(Option<T> data)
 
 ### Vorteile
 
+<v-clicks :fade="true">
+
 - Explizite Semantik: Wert ist da - oder eben nicht
 - Die Signatur von Match erzwingt eine Behandlung beider Fälle - nie wieder vergessene Null-Checks!
 - Achtung: In C# bleibt das Problem, dass "Option" auch ein Objekt ist - und daher selbst null sein kann
 - daher mindestens: in C# explizites NULL enablen mit `<Nullable>enable</Nullable>`
+
+</v-clicks>

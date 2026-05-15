@@ -1,4 +1,4 @@
-# Funktionale Programmierung in C#
+# Funktionale Programmierung in C# 🧔
 
 ### Was ist heute schon möglich in C#?
 

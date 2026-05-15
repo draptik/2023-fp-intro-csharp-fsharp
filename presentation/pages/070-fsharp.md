@@ -1,4 +1,4 @@
-# Einführung in F#
+# Einführung in F# 🧑
 
 ![img](/images/fsharp256.png)
 
@@ -74,7 +74,7 @@ let timesTwo a = a * 2 // int -> int
 
 // Explizite Angaben möglich
 let timesTwoExplicit (a: int) : int = a * 2
-//                       ^^^  ^^^^^
+                      // ^^^  ^^^^^
 ```
 
 <img

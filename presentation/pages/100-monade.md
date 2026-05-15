@@ -44,7 +44,7 @@ let nonEmptyStringStoreInPersistenceAndToUpper (path: string) (content: string) 
 - `(a -> M b)`: Funktion, die `a` bekommt, und `b` in `M` verpackt zurückgibt
 - `M a`: `a` in eine Monade `M` verpackt
 - `M b`: `b` in eine Monade `M` verpackt
--- Andere Bezeichnungen für "bind": flatMap, SelectMany (LINQ), &gt;&gt;=
+- Andere Bezeichnungen für "bind": `flatMap`, `SelectMany` (LINQ), `>>=` (Haskell)
 
 ---
 

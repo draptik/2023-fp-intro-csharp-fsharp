@@ -65,7 +65,7 @@ public class X
 - `(a -> b)`: Funktion, die `a` bekommt, und `b` zurückgibt
 - `F a`: `a` in einen Funktor `F` verpackt
 - `F b`: `b` in einen Funktor `F` verpackt
-- Andere Bezeichnungen für "map": fmap (z.B. in Haskell), Select (LINQ), &lt;$&gt;, &lt;!&gt;
+- Andere Bezeichnungen für "map":<br> `fmap` (z.B. in Haskell), `Select` (LINQ), `<$>`, `<!>`
 
 ---
 

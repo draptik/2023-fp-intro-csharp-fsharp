@@ -1,5 +1,7 @@
 ## FP 101 - Pure Functions
 
+<v-clicks :fade="true">
+
 - haben keine Seiteneffekte ("idempotent")
 - in C#: immer nach `static` umwandelbar
 - Beispiele:
@@ -7,6 +9,8 @@
   - auch ein HTTP-Endpoint sollte beim erfolgreichen Neuanlegen eines Eintrags
     - immer den Status-Code 201 zurückliefern ("idempotent")
     - auch wenn sich natürlich die Datenbank verändert hat
+
+</v-clicks>
 
 ---
 layout: two-cols-header-with-footer
@@ -86,7 +90,7 @@ var averageIncomeAbove25 =
 
 ## Pure functions in LINQ
 
-- ihr macht schon FP mit Pure Functions: LINQ und Lambdas!
+ihr macht schon FP mit Pure Functions: LINQ und Lambdas ("anonyme Funktionen")!
 
 <img
   class="absolute bottom-10 right-40 w-190"
