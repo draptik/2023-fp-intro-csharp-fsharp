@@ -10,6 +10,11 @@
 - FP als default
 - "pit of success"
 
+<img
+  class="absolute top-10 right-10 w-100"
+  src="/images/fsharp256.png"
+/>
+
 ---
 
 ## F#
@@ -190,3 +195,8 @@ let shoppingCart = {
 - Computation Expressions
 - Active Patterns
 - Units of Measure
+
+<img
+  class="absolute bottom-10 right-10 w-60 opacity-30"
+  src="/images/fsharp256.png"
+/>

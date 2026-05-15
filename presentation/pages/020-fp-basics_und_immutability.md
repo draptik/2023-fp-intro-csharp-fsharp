@@ -13,7 +13,7 @@
 
 ## Immutability in C#
 
-Damit ein (C#) Objekt unveränderlich wird, muss gewährleistet sein, dass es auch **nach Erstellung nicht verändert wird**.
+Damit ein (C#) Objekt unveränderlich wird, muss gewährleistet sein,<br> dass es auch **nach Erstellung nicht verändert wird**.
 
 - interne Werte dürfen ausschließlich vom Konstruktor verändert werden
 - keine public oder private setters
