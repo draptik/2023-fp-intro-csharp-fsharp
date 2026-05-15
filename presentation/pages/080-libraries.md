@@ -155,3 +155,37 @@ var areaMatch = shape.Match(
     rectangle => rectangle.Length * rectangle.Width
 );
 ```
+
+---
+
+### Vogen für Immutability / Value Objects
+
+- "A semi-opinionated library which is a source generator and a code analyser. It Source generates Value Objects"
+- der mitgelieferte Code Analyser verbietet eigene Konstruktoren, erkennt falsche Nutzung des Value Objects, ...
+- Standardimplementierungen für gängige Serialisierungen (JSON, EF Core, MongoDB, ...)
+- <https://stevedunn.github.io/Vogen/vogen.html>
+
+---
+
+### Vogen
+
+```csharp
+[ValueObject<int>] // <--
+public partial struct CustomerId;
+
+CustomerId customerId = CustomerId.From(123);
+
+// Eigene Validierungslogik
+private static Validation Validate(int input) => input > 0
+    ? Validation.Ok
+    : Validation.Invalid("Customer IDs must be greater than 0.");
+
+// besondere Werte möglich, die dann als eine Art Enum generiert werden
+[ValueObject<float>]
+[Instance("Freezing", 0)]
+[Instance("Boiling", 100)]
+public readonly partial struct Celsius {
+    private static Validation Validate(float value) =>
+        value >= -273 ? Validation.Ok : Validation.Invalid("Cannot be colder than absolute zero");
+}
+```

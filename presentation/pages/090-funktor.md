@@ -47,30 +47,6 @@ public class X
 
 ---
 
-### Problem: Wert in Container, Funktion kann nichts damit anfangen (F#)
-
-```fsharp
-// F#
-module X
-
-let toUpper (s: string) : string = s.ToUpper()
-
-let stringToOption (s: string) : string option =
-    if String.IsNullOrWhiteSpace s then
-        None
-    else
-        Some s
-
-let nonEmptyStringToUpper (s: string) : ??? =
-    let (nonEmpty : string option) = stringToOption s // <- gibt "eingepackten" Wert zurück
-
-    let nonEmptyUpper = toUpper nonEmpty  // 💥 passt nicht: "string" erwartet,
-                                          // aber "string option" bekommen
-
-```
-
----
-
 ### Funktor ("Mappable")
 
 ![img](/images/Funktor_1.png)
@@ -95,30 +71,6 @@ let nonEmptyStringToUpper (s: string) : ??? =
 
 ### Funktor = Lösung für "Wert in Container, Funktion kann nichts damit anfangen"
 
-- Option.map
-- List.map, Seq.map, Result.map, ...
-
-```fsharp
-let toUpper (s: string) : string = s.ToUpper()
-
-let stringToOption (s: string) : string option =
-    if String.IsNullOrWhiteSpace s then
-        None
-    else
-        Some s
-
-let nonEmptyStringToUpper (s: string) : string option =
-    let nonEmpty = stringToOption s
-
-    // Lösung: map-Funktion nutzen
-    let nonEmptyUpper = Option.map toUpper nonEmpty
-                     // ^^^^^^^^^^
-```
-
----
-
-### Beispiel nochmal in C#
-
 ```csharp
 using CSharpFunctionalExtensions;
 
@@ -139,4 +91,28 @@ public class X
          // ^^^^
     }
 }
+```
+
+---
+
+### Beispiel in F#
+
+- Option.map
+- List.map, Seq.map, Result.map, ...
+
+```fsharp
+let toUpper (s: string) : string = s.ToUpper()
+
+let stringToOption (s: string) : string option =
+    if String.IsNullOrWhiteSpace s then
+        None
+    else
+        Some s
+
+let nonEmptyStringToUpper (s: string) : string option =
+    let nonEmpty = stringToOption s
+
+    // Lösung: map-Funktion nutzen
+    let nonEmptyUpper = Option.map toUpper nonEmpty
+                     // ^^^^^^^^^^
 ```

@@ -54,7 +54,7 @@ layout: two-cols
 
 ### Martin Grotz
 
-- <mdi-email /> <martin.grotz@gmx.de>
+- <mdi-email /> <martin.grotz@danfoss.com>
 - <logos-github-icon /> <https://github.com/groma84>
 - <logos-linkedin-icon /> <https://www.linkedin.com/in/martin-grotz/>
 

@@ -1,4 +1,4 @@
-## Mögliches Vorhandensein eines Werts
+## Option: Mögliches Vorhandensein eines Werts
 
 #### oder: null ist gefährlich.
 
@@ -34,10 +34,11 @@ public int Intify(string s)
 ## Option
 
 ```fsharp
+// Definition in F#
 type Option<'T> = Some<'T> | None
 ```
 
-- entweder ein Wert ist da - dann ist er in "Some" eingepackt
+- entweder ein Wert vom Typ T ist da - dann ist er in "Some" eingepackt
 - oder es ist kein Wert da, dann gibt es ein leeres "None"
 - alternative Bezeichnungen: Optional, Maybe
 

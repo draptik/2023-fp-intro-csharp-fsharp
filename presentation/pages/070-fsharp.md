@@ -14,21 +14,6 @@
 
 ## F#
 
-- Ursprünglich: Microsoft Forschungsprojekt
-- Heute: Community-driven
-- inspiriert von OCaml
-- Multi-Paradigma
-- Fokus auf funktionale Programmierung
-
-<img
-  class="absolute top-10 right-10 w-100"
-  src="/images/fsharp256.png"
-/>
-
----
-
-## F#
-
 - erzwingt keine puren Funktionen, sondern erlaubt Seiteneffekte
 - Statisch typisiert
 - integriert ins .NET Ökosystem
@@ -85,44 +70,6 @@ let timesTwo a = a * 2 // int -> int
 // Explizite Angaben möglich
 let timesTwoExplicit (a: int) : int = a * 2
 //                       ^^^  ^^^^^
-```
-
-<img
-  class="absolute bottom-10 right-10 w-60 opacity-30"
-  src="/images/fsharp256.png"
-/>
-
----
-
-## Currying
-
-> Currying ist die Umwandlung einer Funktion mit mehreren Parametern in eine neue Funktion mit nur einem Parameter, die wiederum eine Funktion zurückgibt mit dem Rest der Parameter.
-
-```fsharp
-// int -> int -> int -> int
-// eigentlich: int -> (int -> (int -> int))
-let addThree a b c = a + b + c
-```
-
-<img
-  class="absolute bottom-10 right-10 w-60 opacity-30"
-  src="/images/fsharp256.png"
-/>
-
----
-
-## Partial Application
-
-- Eine Funktion mit mehreren Parametern bekommt nur einen Teil ihrer Argumente übergeben - der Rest bleibt offen und kann später ausgefüllt werden
-- klappt nur so einfach wegen automatischem Currying in F#
-
-```fsharp
-// Partial Application
-let add a b = a + b // int -> (int -> (int))
-
-let add2 = add 2 // (int -> (int)), "a" ist mit 2 ausgefüllt, "b" ist noch offen
-let six = add2 4 // (int)
-let ten = add2 8 // (int)
 ```
 
 <img
@@ -225,7 +172,7 @@ let shoppingCart = {
 
 - Immutable by default
 - Unmöglich einen ungültigen Record zu erzeugen
-- Structural Equality
+- Structural Equality als default
 - Hint: C# Value Objects out of the box
 - ✨ seit C# 9: `records`
 
@@ -236,40 +183,10 @@ let shoppingCart = {
 
 ---
 
-## Structural Equality
+## Es gibt noch mehr
 
-```fsharp
-// Structural Equality
-type Thing = {content: string; id: int}
-let thing1 = {content = "abc"; id = 15}
-let thing2 = {content = "abc"; id = 15}
-let equal = (thing1 = thing2) // true
-```
-
-- Record Types mit Structural Equality sind ideal, um sehr kompakt "Value Objects" ausdrücken zu können
-
-<img
-  class="absolute bottom-10 right-10 w-60 opacity-30"
-  src="/images/fsharp256.png"
-/>
-
----
-
-## Structural Equality vs. DDD Aggregates
-
-- Möchte man die Standard-Equality nicht, ist es best practice, Equality und Comparison zu verbieten
-- dann muss explizit auf eine Eigenschaft verglichen werden (z.B. die Id)
-
-```fsharp
-[<NoEquality; NoComparison>]
-type NonEquatableNonComparable = {
-    Id: int
-}
-
-let compare n1 n2 = (n1.Id = n2.Id)
-```
-
-<img
-  class="absolute bottom-10 right-10 w-60 opacity-30"
-  src="/images/fsharp256.png"
-/>
+- Currying
+- Partial Application
+- Computation Expressions
+- Active Patterns
+- Units of Measure

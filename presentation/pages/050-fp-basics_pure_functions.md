@@ -1,7 +1,7 @@
 ## FP 101 - Pure Functions
 
 - haben keine Seiteneffekte ("idempotent")
-- in C#: sollten immer nach `static` umwandelbar sein
+- in C#: immer nach `static` umwandelbar
 - Beispiele:
   - `int result = 1 + 2` sollte immer das gleiche Ergebnis zurückliefern
   - auch ein HTTP-Endpoint sollte beim erfolgreichen Neuanlegen eines Eintrags
@@ -86,7 +86,7 @@ var averageIncomeAbove25 =
 
 ## Pure functions in LINQ
 
-- ihr macht schon FP: LINQ und Lambdas!
+- ihr macht schon FP mit Pure Functions: LINQ und Lambdas!
 
 <img
   class="absolute bottom-10 right-40 w-190"
