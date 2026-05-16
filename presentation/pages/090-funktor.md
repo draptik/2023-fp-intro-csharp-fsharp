@@ -13,7 +13,7 @@
 
 ---
 
-## Kleine Funktionen zu größeren verbinden
+## Kleine Funktionen zu größeren verbinden 🧑
 
 - Gängige Vorgehensweise: Kleine Funktionen werden zu immer größeren Funktionalitäten zusammengesteckt ("Komposition")
 - Problem: Nicht alle Funktionen passen gut zusammen

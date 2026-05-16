@@ -1,4 +1,4 @@
-## FP und LLMs
+## FP und LLMs 🧑
 
 - Starkes Typsystem in F#
   - bessere implizite Verifikation als C#

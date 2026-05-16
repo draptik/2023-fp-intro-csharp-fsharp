@@ -3,7 +3,7 @@ layout: image-right
 image: "/images/pexels-kunio-hori-691347157-18232626.jpg"
 ---
 
-## Railway Oriented Programming (1/6)
+## Railway Oriented Programming (1/6) 🧔
 
 Eine Metapher für funktionale Fehlerbehandlung
 
