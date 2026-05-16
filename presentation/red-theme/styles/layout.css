@@ -3,6 +3,11 @@
   --slidev-theme-gray: gray;
 }
 
+html.dark {
+  --slidev-slide-background: #1a1a1a;
+  color: #e8e8e8;
+}
+
 .object-fit-contain {
   object-fit: contain;
 }
