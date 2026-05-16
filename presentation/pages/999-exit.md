@@ -36,28 +36,47 @@ layout: two-cols-header-with-footer
   src="/images/addressbook1.png" >
 
 ---
-layout: two-cols
+layout: two-cols-header
 ---
 
-### Patrick Drechsler
+## Thanks 👏
+
+<div class="flex items-center gap-8">
+  <img class="w-48" src="/images/qr-code-magdeburger-devdays-2026-draptik.png" >
+  <div class="text-base">
+
+<https://draptik.github.io/2026-05-md-dev-days-fp-intro-csharp-fsharp/>
+
+  </div>
+</div>
+
+::left::
+
+<div class="text-sm">
+
+**Patrick Drechsler**
 
 - <mdi-email /> <patrick.drechsler@mathema.de>
 - <logos-github-icon /> <https://github.com/draptik>
 - <logos-linkedin-icon /> <https://www.linkedin.com/in/patrick-drechsler-draptik/>
 
-**Slides:**
-
-- QR-Code 👉
-- <https://draptik.github.io/2026-05-md-dev-days-fp-intro-csharp-fsharp/>
+</div>
 
 ::right::
 
-### Martin Grotz
+<div class="text-sm">
+
+**Martin Grotz**
 
 - <mdi-email /> <martin.grotz@danfoss.com>
 - <logos-github-icon /> <https://github.com/groma84>
 - <logos-linkedin-icon /> <https://www.linkedin.com/in/martin-grotz/>
 
+</div>
+
 <img
-  class="absolute bottom-20 right-50 w-60"
-  src="/images/qr-code-magdeburger-devdays-2026-draptik.png" >
+  class="absolute -bottom-5 left-4 w-60 opacity-50"
+  src="https://sli.dev/assets/arrow-bottom-left.svg"
+  alt=""
+/>
+<p class="absolute bottom-17 left-60 opacity-30">Options (download/navigation)</p>
