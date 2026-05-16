@@ -140,12 +140,41 @@ public static Result<T> MyBind<T>(
 
 ### Railway Oriented Programming (5/6)
 
-**Bind** ermöglicht einer Funktion mit 1 Eingabe den Umgang mit Result-Typen (2 Ausgaben)
+**Bind** entkoppelt die "übergebene Funktion" von dem vorherigen Ergebnis
 
-<img
-  class="absolute bottom-10 left-20 w-180"
-  src="/images/rop-tracks-Page-4.png"
-/>
+```mermaid
+flowchart LR
+  subgraph In["Result&ltTIn&gt"]
+    IS(["✅ Success&ltTIn&gt"]):::ok
+    IS ~~~ IF
+    IF(["❌ Failure"]):::fail
+  end
+
+  In --> Bind
+
+  subgraph Bind["🔗 Bind"]
+    direction TB
+    D{Result?}
+    D -->|Success| FN["''übergebene Funktion''\n1 Eingang ➡️ 2 Ausgaben\nTIn ➡️ (TOut | Failure)"]:::highlight
+    D -->|Failure| BP((" "))
+  end
+
+  subgraph Out["Result&ltTOut&gt"]
+    OS(["✅ Success&ltTOut&gt"]):::ok
+    OF(["❌ Failure"]):::fail
+  end
+
+  FN --> OS
+  BP --> OF
+  FN --> OF
+
+  style In  fill:#dbeafe,stroke:#93c5fd,color:#000
+  style Out fill:#f3e8ff,stroke:#c084fc,color:#000
+
+  classDef ok        fill:#198754,color:#fff,stroke:#198754
+  classDef fail      fill:#dc3545,color:#fff,stroke:#dc3545
+  classDef highlight fill:#ffc107,color:#000,stroke:#e0a800,stroke-width:2px
+```
 
 ---
 
