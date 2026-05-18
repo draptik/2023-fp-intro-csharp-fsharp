@@ -8,7 +8,7 @@
 
             <div class="w-11/12 fixed bottom-0 flex justify-between mb-2 text-sm footer">
                 <span>{{ $slidev.configs.occasion }} </span>
-                <span>{{ $slidev.configs.presenter }} - {{ $slidev.configs.contact }}</span>
+                <span>{{ $slidev.configs.presenterName }} - {{ $slidev.configs.contact }}</span>
                 <span style="min-width: 4rem;">
                     <SlideCurrentNo /> /
                     <SlidesTotal />

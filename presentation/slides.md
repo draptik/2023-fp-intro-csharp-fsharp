@@ -8,7 +8,7 @@ defaults:
 occasion: "Magdeburger DevDays 2026"
 occasionLogoUrl: "images/magdeburger-dev-days-logo.jpeg"
 company: ""
-presenter: "Patrick Drechsler & Martin Grotz"
+presenterName: "Patrick Drechsler & Martin Grotz"
 contact: "patrick.drechsler@mathema.de & martin.grotz@danfoss.com"
 
 info: |
