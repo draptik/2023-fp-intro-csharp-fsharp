@@ -21,6 +21,10 @@ src: ./pages/000-title.md
 ---
 
 ---
+src: ./pages/009-other-fp-talks.md
+---
+
+---
 src: ./pages/010-intro.md
 ---
 
