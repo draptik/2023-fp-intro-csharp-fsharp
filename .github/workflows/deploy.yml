@@ -2,31 +2,30 @@ name: Deploy pages
 on:
   push:
     branches:
-      - 2024-magdeburger-dev-days
+      - 2026-magdeburger-dev-days
 
 jobs:
   deploy:
 
     env:
       PRESENTATION_FOLDER: 'presentation'
-      TARGET_REPO_NAME: '2024-05-md-dev-days-fp-intro-csharp-fsharp'
+      TARGET_REPO_NAME: '2026-05-md-dev-days-fp-intro-csharp-fsharp'
       TARGET_GITHUB_OWNER: 'draptik'
+      NODE_VERSION: 'lts/*'
 
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v6
 
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 'lts/*'
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
         run: |
             cd ${{ env.PRESENTATION_FOLDER }}
-            npm install
-
+            npm ci
 
       - name: Build
         run: |
@@ -34,9 +33,9 @@ jobs:
             npm run build -- --base '/${{ env.TARGET_REPO_NAME }}/'
 
       - name: Deploy to target repository
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: crazy-max/ghaction-github-pages@v5
         with:
-          single-commit: true
-          folder: ${{ env.PRESENTATION_FOLDER }}/dist # The folder the action should deploy
-          repository-name: '${{ env.TARGET_GITHUB_OWNER }}/${{ env.TARGET_REPO_NAME }}'
-          token: ${{ secrets.SLIDEV_TOKEN }}
+          build_dir: ${{ env.PRESENTATION_FOLDER }}/dist
+          repo: '${{ env.TARGET_GITHUB_OWNER }}/${{ env.TARGET_REPO_NAME }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.SLIDEV_TOKEN }}

@@ -4,7 +4,6 @@ layout: two-cols
 
 ## Pure Functions - Aufgabe
 
-
 ```csharp
 var people = new List<Person>();
 {

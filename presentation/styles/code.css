@@ -2,7 +2,8 @@
     font-family: JetBrains;
 }
 
-.slidev-code .token.comment {
-    background-color: lightgray;
-    color: black;
+.slidev-code .shiki-comment {
+    background-color: rgba(77, 124, 15, 0.1);
+    border-radius: 2px;
+    padding: 0 2px;
 }

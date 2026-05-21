@@ -1,0 +1,17 @@
+ignores:
+  - "node_modules/**"
+  - "red-theme/**"
+
+config:
+  MD001: false # heading increment should only increase by one level
+  MD003: false # consistent heading styles
+  MD013: false # line length
+  MD020: false # no missing space closed atx
+  MD022: false # heading surround 1 line
+  MD024: false # no duplicate headings
+  MD025: false # single title
+  MD026: false # no trailing punctuation in headings
+  MD033: false # no inline html
+  MD036: false # no emphasis
+  MD041: false # allow non-h1 header
+  MD045: false # no alt text
